@@ -1,0 +1,31 @@
+
+BINDIR=../../bin
+
+#****************************************
+#mpi
+	MPIPATH=/mnt/hmf/mpich-3.1.4
+	LIBPATH=-L$(MPIPATH)/lib/ -lmpich
+	INCLUDE=-I$(MPIPATH)/include/
+#****************************************
+
+#****************************************
+#Lapack
+	LIBLAPACK = -lblas -llapack
+
+#****************************************
+#Arpack
+INCARP = -I/mnt/n7fs/ens/tp_guivarch/opt/ARPACK/include
+#LIBARP = -L/mnt/n7fs/ens/tp_guivarch/opt/ARPACK/lib -larpack_LINUX
+
+#****************************************
+#Compilateur Fortran 90
+	MPIF90=$(MPIPATH)/bin/mpif90
+	F90=$(MPIPATH)/bin/mpif90
+
+#Parametres de compilation
+	OPTIONS=-cpp -Daff=false
+	#Peuvent etre utilises : -Wall -pedantic
+	#Activer les affichages afin de débugger : supprimer '=false' et laisser seulement -Daff
+	FLAGS=-O3
+#****************************************
+

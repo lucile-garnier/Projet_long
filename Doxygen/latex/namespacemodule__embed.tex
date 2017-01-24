@@ -1,0 +1,183 @@
+\hypertarget{namespacemodule__embed}{}\section{module\+\_\+embed Module Reference}
+\label{namespacemodule__embed}\index{module\+\_\+embed@{module\+\_\+embed}}
+
+
+Contains K-\/means and spectral embedding algorithms.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__embed_ab78350f96b04d0ce2ca0bd10abd50440}{apply\+\_\+spectral\+\_\+embedding} (nb\+\_\+clusters, n, Z, A, ratio, clusters, clusters\+\_\+centers, points\+\_\+by\+\_\+clusters, clusters\+\_\+energies, nb\+\_\+info, proc\+\_\+id, ratio\+\_\+moy, ratio\+\_\+rij, ratio\+\_\+rii)
+\begin{DoxyCompactList}\small\item\em Computes the clusters using eigen vector matrix. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__embed_a27f0555abee781e67c2def5e2b9471d2}{apply\+\_\+kmeans} (dim, nb\+\_\+points, nb\+\_\+clusters, nb\+\_\+iter\+\_\+max, nb\+\_\+iter, points, clusters, clusters\+\_\+centers, points\+\_\+by\+\_\+clusters, clusters\+\_\+energies, proc\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Implements K-\/\+Means algorithm (required by spectral clustering and Kernel K-\/\+Means methods) The algorithm works as follows\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains K-\/means and spectral embedding algorithms. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__embed_a27f0555abee781e67c2def5e2b9471d2}{}\index{module\+\_\+embed@{module\+\_\+embed}!apply\+\_\+kmeans@{apply\+\_\+kmeans}}
+\index{apply\+\_\+kmeans@{apply\+\_\+kmeans}!module\+\_\+embed@{module\+\_\+embed}}
+\subsubsection[{apply\+\_\+kmeans}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+embed\+::apply\+\_\+kmeans (
+\begin{DoxyParamCaption}
+\item[{integer}]{dim, }
+\item[{integer}]{nb\+\_\+points, }
+\item[{integer}]{nb\+\_\+clusters, }
+\item[{integer}]{nb\+\_\+iter\+\_\+max, }
+\item[{integer}]{nb\+\_\+iter, }
+\item[{double precision, dimension (dim, nb\+\_\+points)}]{points, }
+\item[{integer, dimension (nb\+\_\+points)}]{clusters, }
+\item[{double precision, dimension (dim, nb\+\_\+clusters)}]{clusters\+\_\+centers, }
+\item[{integer, dimension (nb\+\_\+clusters)}]{points\+\_\+by\+\_\+clusters, }
+\item[{double precision, dimension (nb\+\_\+clusters)}]{clusters\+\_\+energies, }
+\item[{integer}]{proc\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__embed_a27f0555abee781e67c2def5e2b9471d2}
+
+
+Implements K-\/\+Means algorithm (required by spectral clustering and Kernel K-\/\+Means methods) The algorithm works as follows\+: 
+
+
+\begin{DoxyEnumerate}
+\item Choose {\itshape nb\+\_\+clusters} starting points as cluster centers randomly 
+\item For each point in the data set, find the minimum distance from a cluster center and attach it to the corresponding cluster 
+\item Compute the density center of each cluster 
+\item Stop if the density centers are similar to the cluster centers 
+\item Select the density centers as new cluster centers and start from the beginning 
+\end{DoxyEnumerate}
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em points} & the points \\
+\hline
+\mbox{\tt in}  & {\em dim} & the number of spatial dimensions \\
+\hline
+\mbox{\tt in}  & {\em dim} & the number of spatial dimensions \\
+\hline
+\mbox{\tt in}  & {\em dim} & \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+iter\+\_\+max} & the maximum number of iterations \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+points} & the number of points \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+points} & the number of points \\
+\hline
+\mbox{\tt in,out}  & {\em clusters\+\_\+centers} & the cluster centers \\
+\hline
+ & {\em proc\+\_\+id} & the processus identifier \\
+\hline
+\mbox{\tt out}  & {\em clusters\+\_\+energies} & the cluster energies \\
+\hline
+\mbox{\tt out}  & {\em nb\+\_\+iter} & the number of iterations taken \\
+\hline
+\mbox{\tt out}  & {\em clusters} & indicates which cluster each point belongs to \\
+\hline
+\mbox{\tt out}  & {\em points\+\_\+by\+\_\+clusters} & the number of points in each cluster \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__embed_a27f0555abee781e67c2def5e2b9471d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__embed_ab78350f96b04d0ce2ca0bd10abd50440}{}\index{module\+\_\+embed@{module\+\_\+embed}!apply\+\_\+spectral\+\_\+embedding@{apply\+\_\+spectral\+\_\+embedding}}
+\index{apply\+\_\+spectral\+\_\+embedding@{apply\+\_\+spectral\+\_\+embedding}!module\+\_\+embed@{module\+\_\+embed}}
+\subsubsection[{apply\+\_\+spectral\+\_\+embedding}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+embed\+::apply\+\_\+spectral\+\_\+embedding (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+clusters, }
+\item[{integer}]{n, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{Z, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{A, }
+\item[{double precision}]{ratio, }
+\item[{integer, dimension(\+:), pointer}]{clusters, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{clusters\+\_\+centers, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+clusters, }
+\item[{double precision, dimension(\+:), pointer}]{clusters\+\_\+energies, }
+\item[{integer}]{nb\+\_\+info, }
+\item[{integer}]{proc\+\_\+id, }
+\item[{double precision}]{ratio\+\_\+moy, }
+\item[{double precision}]{ratio\+\_\+rij, }
+\item[{double precision}]{ratio\+\_\+rii}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__embed_ab78350f96b04d0ce2ca0bd10abd50440}
+
+
+Computes the clusters using eigen vector matrix. 
+
+The first part of the method performs the following\+: 
+\begin{DoxyEnumerate}
+\item Extract the {\itshape nb\+\_\+clusters} first columns of the eigen vector matrix (corresponding to the highest eigen values) 
+\item Normalize the matrix and transposes it  
+\item Apply K-\/\+Means on it to find the clusters  
+\end{DoxyEnumerate}Then it operates a quality measurement on the found clusters. It computes the sum of the ratios that indicate if the number of clusters is optimal. The lower this sum is, the best is the number of clusters. This method also compute the number of clusters that have at least one point and that have an internal affinity greater than zero. \begin{DoxyNote}{Note}
+We refer you to the article {\itshape \char`\"{}\+On a strategy for Spectral Clustering with parallel computation\char`\"{}} for a better understanding. 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em A} & the affinity matrix \\
+\hline
+\mbox{\tt in}  & {\em Z} & the matrix of eigen vectors \\
+\hline
+\mbox{\tt in}  & {\em n} & \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em proc\+\_\+id} & the processus identifier \\
+\hline
+\mbox{\tt out}  & {\em clusters\+\_\+centers} & the cluster centers \\
+\hline
+\mbox{\tt out}  & {\em clusters\+\_\+energies} & the cluster energies \\
+\hline
+\mbox{\tt out}  & {\em ratio} & the sum of the ratios between Frobenius norm of the off-\/diagonal and the diagonal blocks of the normalized affinity matrix \\
+\hline
+\mbox{\tt out}  & {\em ratio\+\_\+moy} & \\
+\hline
+\mbox{\tt out}  & {\em ratio\+\_\+rii} & the sum of the denominator of each ratio \\
+\hline
+\mbox{\tt out}  & {\em ratio\+\_\+rij} & the sum of the numerators of each ratio \\
+\hline
+\mbox{\tt out}  & {\em nb\+\_\+info} & the reduced number of clusters (?) \\
+\hline
+\mbox{\tt out}  & {\em clusters} & indicates which cluster each point belongs to \\
+\hline
+\mbox{\tt out}  & {\em points\+\_\+by\+\_\+clusters} & the number of points in each cluster \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{namespacemodule__embed_ab78350f96b04d0ce2ca0bd10abd50440_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{namespacemodule__embed_ab78350f96b04d0ce2ca0bd10abd50440_icgraph}
+\end{center}
+\end{figure}
+
+

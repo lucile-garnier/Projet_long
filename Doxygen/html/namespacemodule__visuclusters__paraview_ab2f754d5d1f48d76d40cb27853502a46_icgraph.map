@@ -1,0 +1,9 @@
+<map id="module_visuclusters_paraview::ecritpoint_paraview" name="module_visuclusters_paraview::ecritpoint_paraview">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__paraview.html#a37663e9b24a2747ba409b53a2715bb76" title="Initializes the file of the partitionning in Paraview format. " alt="" coords="197,5,342,61"/>
+<area shape="rect" id="node5" href="$namespacemodule__visuclusters__paraview.html#abed87b4c957689d9cfdc62811f3b213b" title="Writes the clusters before the groupping in Paraview format. " alt="" coords="192,85,347,141"/>
+<area shape="rect" id="node7" href="$namespacemodule__visuclusters__paraview.html#a7e7514cf4abb2a7e0a8fa1d23252811e" title="Writes the clusters after the groupping in Paraview format. " alt="" coords="198,165,341,221"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters.html#a5846e43bb056a9d985195b4286c09d98" title="Initializes the file of the partitionning. " alt="" coords="401,21,540,62"/>
+<area shape="rect" id="node4" href="$visuclusters_8f90.html#a3b2a7a17613e5baaf60535326c990c7e" title="visuclusters" alt="" coords="595,100,685,127"/>
+<area shape="rect" id="node6" href="$namespacemodule__visuclusters.html#a426807700ec2991178bd989694a2ff17" title="Writes the clusters before grouping by calling the corresponding method (Gmsh or Paraview) ..." alt="" coords="395,93,547,134"/>
+<area shape="rect" id="node8" href="$namespacemodule__visuclusters.html#adf901cfd1bc769cadd3558369594b074" title="Writes the clusters after grouping by calling the corresponding method (Gmsh or Paraview) ..." alt="" coords="401,165,541,206"/>
+</map>

@@ -1,0 +1,255 @@
+\hypertarget{namespacemodule__sparse}{}\section{module\+\_\+sparse Module Reference}
+\label{namespacemodule__sparse}\index{module\+\_\+sparse@{module\+\_\+sparse}}
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__sparse_ac7a222921bd378c5d9d8d41fa05423ad}{apply\+\_\+spectral\+\_\+clustering\+\_\+sparse} (proc\+\_\+id, nb\+\_\+clusters\+\_\+max, nb\+\_\+clusters\+\_\+opt, partitioned\+\_\+data, sigma)
+\begin{DoxyCompactList}\small\item\em Computes the clusters using spectral clustering algorithm using sparsity. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__sparse_a6fc2f45f94f4ea124ea27f88b8823274}{apply\+\_\+spectral\+\_\+embedding\+\_\+sparse} (nb\+\_\+clusters, n, Z, nnz, A\+S, I\+A\+S, J\+A\+S, ratio, clusters, clusters\+\_\+centers, points\+\_\+by\+\_\+clusters, clusters\+\_\+energies, nb\+\_\+info, proc\+\_\+id, ratio\+\_\+moy, ratio\+\_\+rij, ratio\+\_\+rii)
+\begin{DoxyCompactList}\small\item\em Computes the ideal number of clusters using sparsity. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__sparse_a172821d54ec6f3bec6f07ca4f9d96d37}{compute\+\_\+matvec\+\_\+prod} (A, I\+A, J\+A, X, Y, n, nnz)
+\begin{DoxyCompactList}\small\item\em Computes the matrix vector product using sparsity. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__sparse_a1945ecdb844a637fd6372b3686b4df40}{solve\+\_\+arpack} (A, I\+A, J\+A, dim, nnz, nb\+\_\+clusters\+\_\+max, W, Z)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__sparse_ac7a222921bd378c5d9d8d41fa05423ad}{}\index{module\+\_\+sparse@{module\+\_\+sparse}!apply\+\_\+spectral\+\_\+clustering\+\_\+sparse@{apply\+\_\+spectral\+\_\+clustering\+\_\+sparse}}
+\index{apply\+\_\+spectral\+\_\+clustering\+\_\+sparse@{apply\+\_\+spectral\+\_\+clustering\+\_\+sparse}!module\+\_\+sparse@{module\+\_\+sparse}}
+\subsubsection[{apply\+\_\+spectral\+\_\+clustering\+\_\+sparse}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sparse\+::apply\+\_\+spectral\+\_\+clustering\+\_\+sparse (
+\begin{DoxyParamCaption}
+\item[{integer}]{proc\+\_\+id, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+max, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+opt, }
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{double precision}]{sigma}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sparse_ac7a222921bd378c5d9d8d41fa05423ad}
+
+
+Computes the clusters using spectral clustering algorithm using sparsity. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__calcul_a7bf1a318c636b4e204f267103d00114a}{apply\+\_\+spectral\+\_\+clustering()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sigma} & the affinity parameter \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters\+\_\+max} & the maximum number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters\+\_\+opt} & the optimal number of clusters \\
+\hline
+\mbox{\tt in}  & {\em proc\+\_\+id} & the processus identifier \\
+\hline
+\mbox{\tt in,out}  & {\em partitioned\+\_\+data} & the partitioned data for computing \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__sparse_ac7a222921bd378c5d9d8d41fa05423ad_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__sparse_a6fc2f45f94f4ea124ea27f88b8823274}{}\index{module\+\_\+sparse@{module\+\_\+sparse}!apply\+\_\+spectral\+\_\+embedding\+\_\+sparse@{apply\+\_\+spectral\+\_\+embedding\+\_\+sparse}}
+\index{apply\+\_\+spectral\+\_\+embedding\+\_\+sparse@{apply\+\_\+spectral\+\_\+embedding\+\_\+sparse}!module\+\_\+sparse@{module\+\_\+sparse}}
+\subsubsection[{apply\+\_\+spectral\+\_\+embedding\+\_\+sparse}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sparse\+::apply\+\_\+spectral\+\_\+embedding\+\_\+sparse (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+clusters, }
+\item[{integer}]{n, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{Z, }
+\item[{integer}]{nnz, }
+\item[{double precision, dimension(\+:), pointer}]{A\+S, }
+\item[{integer, dimension(\+:), pointer}]{I\+A\+S, }
+\item[{integer, dimension(\+:), pointer}]{J\+A\+S, }
+\item[{double precision}]{ratio, }
+\item[{integer, dimension(\+:), pointer}]{clusters, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{clusters\+\_\+centers, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+clusters, }
+\item[{double precision, dimension(\+:), pointer}]{clusters\+\_\+energies, }
+\item[{integer}]{nb\+\_\+info, }
+\item[{integer}]{proc\+\_\+id, }
+\item[{double precision}]{ratio\+\_\+moy, }
+\item[{double precision}]{ratio\+\_\+rij, }
+\item[{double precision}]{ratio\+\_\+rii}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sparse_a6fc2f45f94f4ea124ea27f88b8823274}
+
+
+Computes the ideal number of clusters using sparsity. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__embed_ab78350f96b04d0ce2ca0bd10abd50440}{apply\+\_\+spectral\+\_\+embedding()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Z} & the matrix of eigen vectors \\
+\hline
+\mbox{\tt in}  & {\em A\+S} & the affinity sparse matrix \\
+\hline
+\mbox{\tt in}  & {\em n} & \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nnz} & the number of non-\/zero coefficients \\
+\hline
+\mbox{\tt in}  & {\em proc\+\_\+id} & the processus identifier \\
+\hline
+\mbox{\tt in}  & {\em I\+A\+S} & the row indices of the affinity matrix coefficients \\
+\hline
+\mbox{\tt in}  & {\em J\+A\+S} & the column indices of the affinity matrix coefficients \\
+\hline
+\mbox{\tt out}  & {\em clusters\+\_\+centers} & the cluster centers \\
+\hline
+\mbox{\tt out}  & {\em clusters\+\_\+energies} & the cluster energies \\
+\hline
+\mbox{\tt out}  & {\em ratio} & the sum of the ratios between Frobenius norm of the off-\/diagonal and the diagonal blocks of the normalized affinity matrix \\
+\hline
+\mbox{\tt out}  & {\em ratio\+\_\+moy} & \\
+\hline
+\mbox{\tt out}  & {\em ratio\+\_\+rii} & the sum of the denominator of each ratio \\
+\hline
+\mbox{\tt out}  & {\em ratio\+\_\+rij} & the sum of the numerators of each ratio \\
+\hline
+\mbox{\tt out}  & {\em nb\+\_\+info} & the reduced number of clusters (?) \\
+\hline
+\mbox{\tt out}  & {\em clusters} & indicates which cluster each point belongs to \\
+\hline
+\mbox{\tt out}  & {\em points\+\_\+by\+\_\+clusters} & the number of points in each cluster \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__sparse_a6fc2f45f94f4ea124ea27f88b8823274_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__sparse_a6fc2f45f94f4ea124ea27f88b8823274_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__sparse_a172821d54ec6f3bec6f07ca4f9d96d37}{}\index{module\+\_\+sparse@{module\+\_\+sparse}!compute\+\_\+matvec\+\_\+prod@{compute\+\_\+matvec\+\_\+prod}}
+\index{compute\+\_\+matvec\+\_\+prod@{compute\+\_\+matvec\+\_\+prod}!module\+\_\+sparse@{module\+\_\+sparse}}
+\subsubsection[{compute\+\_\+matvec\+\_\+prod}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sparse\+::compute\+\_\+matvec\+\_\+prod (
+\begin{DoxyParamCaption}
+\item[{double precision, dimension(nnz), intent(in)}]{A, }
+\item[{integer, dimension(nnz), intent(in)}]{I\+A, }
+\item[{integer, dimension(nnz), intent(in)}]{J\+A, }
+\item[{double precision, dimension(n), intent(in)}]{X, }
+\item[{double precision, dimension(n), intent(out)}]{Y, }
+\item[{integer, intent(in)}]{n, }
+\item[{integer, intent(in)}]{nnz}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sparse_a172821d54ec6f3bec6f07ca4f9d96d37}
+
+
+Computes the matrix vector product using sparsity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em A} & the sparse matrix \\
+\hline
+\mbox{\tt in}  & {\em X} & the input vector \\
+\hline
+\mbox{\tt in}  & {\em n} & \\
+\hline
+\mbox{\tt in}  & {\em nnz} & the number of non-\/zero coefficients \\
+\hline
+\mbox{\tt in}  & {\em I\+A} & the row indices of the matrix coefficients \\
+\hline
+\mbox{\tt in}  & {\em J\+A} & the column indices of the matrix coefficients \\
+\hline
+\mbox{\tt out}  & {\em Y} & the resulting vector \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__sparse_a172821d54ec6f3bec6f07ca4f9d96d37_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__sparse_a1945ecdb844a637fd6372b3686b4df40}{}\index{module\+\_\+sparse@{module\+\_\+sparse}!solve\+\_\+arpack@{solve\+\_\+arpack}}
+\index{solve\+\_\+arpack@{solve\+\_\+arpack}!module\+\_\+sparse@{module\+\_\+sparse}}
+\subsubsection[{solve\+\_\+arpack}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sparse\+::solve\+\_\+arpack (
+\begin{DoxyParamCaption}
+\item[{double precision, dimension(\+:), intent(in)}]{A, }
+\item[{integer, dimension(\+:), intent(in)}]{I\+A, }
+\item[{integer, dimension(\+:), intent(in)}]{J\+A, }
+\item[{integer, intent(in)}]{dim, }
+\item[{integer, intent(in)}]{nnz, }
+\item[{integer, intent(in)}]{nb\+\_\+clusters\+\_\+max, }
+\item[{double precision, dimension(\+:), intent(out), pointer}]{W, }
+\item[{double precision, dimension(\+:,\+:), intent(out), pointer}]{Z}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sparse_a1945ecdb844a637fd6372b3686b4df40}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em A} & the affinity sparse matrix \\
+\hline
+\mbox{\tt in}  & {\em dim} & the number of spatial dimensions \\
+\hline
+\mbox{\tt in}  & {\em dim} & the number of spatial dimensions \\
+\hline
+\mbox{\tt in}  & {\em dim} & \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters\+\_\+max} & the maximum number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nnz} & the number of non-\/zero coefficients \\
+\hline
+\mbox{\tt in}  & {\em I\+A} & the row indices of the affinity matrix coefficients \\
+\hline
+\mbox{\tt in}  & {\em J\+A} & the column indices of the affinity matrix coefficients \\
+\hline
+\mbox{\tt out}  & {\em Z} & the matrix of eigen vectors \\
+\hline
+\mbox{\tt out}  & {\em W} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__sparse_a1945ecdb844a637fd6372b3686b4df40_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{namespacemodule__sparse_a1945ecdb844a637fd6372b3686b4df40_icgraph}
+\end{center}
+\end{figure}
+
+

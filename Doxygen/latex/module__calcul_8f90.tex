@@ -1,0 +1,24 @@
+\hypertarget{module__calcul_8f90}{}\section{module\+\_\+calcul.\+f90 File Reference}
+\label{module__calcul_8f90}\index{module\+\_\+calcul.\+f90@{module\+\_\+calcul.\+f90}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+module \hyperlink{namespacemodule__calcul}{module\+\_\+calcul}
+\begin{DoxyCompactList}\small\item\em Contains the spectral clustering method and methods that computes affinity parameters for kernels and overlapping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__calcul_abd05b2b3ee81b4f779744a951d8a4c05}{module\+\_\+calcul\+::get\+\_\+sigma} (partitioned\+\_\+data, sigma)
+\begin{DoxyCompactList}\small\item\em Computes the affinity parameter $sigma$. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__calcul_a118fd6a58b1064989fa68460457bea60}{module\+\_\+calcul\+::get\+\_\+sigma\+\_\+interface} (proc\+\_\+id, partitioned\+\_\+data, sigma, bounds, partitioning, epsilon)
+\begin{DoxyCompactList}\small\item\em Computes the affinity parameter $sigma$ for the interface. \end{DoxyCompactList}\item 
+double precision function, dimension(partitioned\+\_\+data\%nb, partitioned\+\_\+data\%nb) \hyperlink{namespacemodule__calcul_a97fd8d0653adb9041ab3ca899c0d0f91}{module\+\_\+calcul\+::poly\+\_\+kernel} (partitioned\+\_\+data, gam, delta)
+\item 
+double precision function, dimension(partitioned\+\_\+data\%nb, partitioned\+\_\+data\%nb) \hyperlink{namespacemodule__calcul_a44b26b54d1b94dddba0ba575be04658b}{module\+\_\+calcul\+::gaussian\+\_\+kernel} (partitioned\+\_\+data, sigma)
+\item 
+subroutine \hyperlink{namespacemodule__calcul_a72848eb89fbd2fe4a97512f53752ca5c}{module\+\_\+calcul\+::apply\+\_\+kernel\+\_\+k\+\_\+means} (proc\+\_\+id, nb\+\_\+clusters\+\_\+max, nb\+\_\+clusters\+\_\+opt, partitioned\+\_\+data, clust\+\_\+param)
+\item 
+subroutine \hyperlink{namespacemodule__calcul_a7bf1a318c636b4e204f267103d00114a}{module\+\_\+calcul\+::apply\+\_\+spectral\+\_\+clustering} (proc\+\_\+id, nb\+\_\+clusters\+\_\+max, nb\+\_\+clusters\+\_\+opt, partitioned\+\_\+data, sigma, clust\+\_\+param)
+\item 
+subroutine \hyperlink{namespacemodule__calcul_abb4a64b9f338e54274a250b9c10bf0bd}{module\+\_\+calcul\+::mean\+\_\+shift} (proc\+\_\+id, nb\+\_\+clusters\+\_\+max, nb\+\_\+clusters\+\_\+opt, partitioned\+\_\+data, bandwidth)
+\end{DoxyCompactItemize}

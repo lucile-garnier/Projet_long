@@ -1,0 +1,166 @@
+\hypertarget{namespacemodule__solve}{}\section{module\+\_\+solve Module Reference}
+\label{namespacemodule__solve}\index{module\+\_\+solve@{module\+\_\+solve}}
+
+
+Contains methods from Lapack library dealing with eigen values computing.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__solve_a6e1a9cb766d06da8f5ac09592d460849}{solve\+\_\+dgeevx} (N, A, V\+R, W\+R)
+\item 
+subroutine \hyperlink{namespacemodule__solve_a2a2b6bf2dc5b4e3d08908fa43fca207b}{solve\+\_\+dgeev} (N, A, V\+R, W\+R)
+\item 
+subroutine \hyperlink{namespacemodule__solve_a52e46b41df1e4cf29e5ae9e908ed4293}{solve\+\_\+dsyev} (N, A, W, L\+W\+O\+R\+K)
+\item 
+subroutine \hyperlink{namespacemodule__solve_a71d616a8ea24efa60b9d9227d0a40309}{solve\+\_\+dsyevr} (k, N, A, Z, L\+W\+O\+R\+K, L\+I\+W\+O\+R\+K, W, M)
+\item 
+subroutine \hyperlink{namespacemodule__solve_af9f9bed9d344018397cbc722f70a6bb0}{solve\+\_\+dsyevx} (k, N, A, Z, L\+W\+O\+R\+K, L\+I\+W\+O\+R\+K, W, M)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains methods from Lapack library dealing with eigen values computing. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__solve_a2a2b6bf2dc5b4e3d08908fa43fca207b}{}\index{module\+\_\+solve@{module\+\_\+solve}!solve\+\_\+dgeev@{solve\+\_\+dgeev}}
+\index{solve\+\_\+dgeev@{solve\+\_\+dgeev}!module\+\_\+solve@{module\+\_\+solve}}
+\subsubsection[{solve\+\_\+dgeev}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+solve\+::solve\+\_\+dgeev (
+\begin{DoxyParamCaption}
+\item[{integer}]{N, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{A, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{V\+R, }
+\item[{double precision, dimension(\+:), pointer}]{W\+R}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__solve_a2a2b6bf2dc5b4e3d08908fa43fca207b}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em A} & the affinity matrix \\
+\hline
+\mbox{\tt in}  & {\em N} & \\
+\hline
+\mbox{\tt out}  & {\em V\+R} & \\
+\hline
+\mbox{\tt out}  & {\em W\+R} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{namespacemodule__solve_a2a2b6bf2dc5b4e3d08908fa43fca207b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__solve_a6e1a9cb766d06da8f5ac09592d460849}{}\index{module\+\_\+solve@{module\+\_\+solve}!solve\+\_\+dgeevx@{solve\+\_\+dgeevx}}
+\index{solve\+\_\+dgeevx@{solve\+\_\+dgeevx}!module\+\_\+solve@{module\+\_\+solve}}
+\subsubsection[{solve\+\_\+dgeevx}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+solve\+::solve\+\_\+dgeevx (
+\begin{DoxyParamCaption}
+\item[{integer}]{N, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{A, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{V\+R, }
+\item[{double precision, dimension(\+:), pointer}]{W\+R}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__solve_a6e1a9cb766d06da8f5ac09592d460849}
+
+\begin{DoxyParams}{Parameters}
+{\em A} & the affinity matrix \\
+\hline
+{\em V\+R} & \\
+\hline
+{\em W\+R} & \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__solve_a52e46b41df1e4cf29e5ae9e908ed4293}{}\index{module\+\_\+solve@{module\+\_\+solve}!solve\+\_\+dsyev@{solve\+\_\+dsyev}}
+\index{solve\+\_\+dsyev@{solve\+\_\+dsyev}!module\+\_\+solve@{module\+\_\+solve}}
+\subsubsection[{solve\+\_\+dsyev}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+solve\+::solve\+\_\+dsyev (
+\begin{DoxyParamCaption}
+\item[{integer}]{N, }
+\item[{double precision, dimension(n,n)}]{A, }
+\item[{double precision, dimension(n)}]{W, }
+\item[{integer}]{L\+W\+O\+R\+K}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__solve_a52e46b41df1e4cf29e5ae9e908ed4293}
+
+\begin{DoxyParams}{Parameters}
+{\em A} & the affinity matrix \\
+\hline
+{\em W} & \\
+\hline
+{\em L\+W\+O\+R\+K} & \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__solve_a71d616a8ea24efa60b9d9227d0a40309}{}\index{module\+\_\+solve@{module\+\_\+solve}!solve\+\_\+dsyevr@{solve\+\_\+dsyevr}}
+\index{solve\+\_\+dsyevr@{solve\+\_\+dsyevr}!module\+\_\+solve@{module\+\_\+solve}}
+\subsubsection[{solve\+\_\+dsyevr}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+solve\+::solve\+\_\+dsyevr (
+\begin{DoxyParamCaption}
+\item[{integer}]{k, }
+\item[{integer}]{N, }
+\item[{double precision, dimension(n,n)}]{A, }
+\item[{double precision, dimension(n,n)}]{Z, }
+\item[{integer}]{L\+W\+O\+R\+K, }
+\item[{integer}]{L\+I\+W\+O\+R\+K, }
+\item[{double precision, dimension(n)}]{W, }
+\item[{integer}]{M}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__solve_a71d616a8ea24efa60b9d9227d0a40309}
+
+\begin{DoxyParams}{Parameters}
+{\em A} & the affinity matrix \\
+\hline
+{\em Z} & the matrix of eigen vectors \\
+\hline
+{\em W} & \\
+\hline
+{\em k} & \\
+\hline
+{\em L\+I\+W\+O\+R\+K} & \\
+\hline
+{\em L\+W\+O\+R\+K} & \\
+\hline
+{\em M} & \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__solve_af9f9bed9d344018397cbc722f70a6bb0}{}\index{module\+\_\+solve@{module\+\_\+solve}!solve\+\_\+dsyevx@{solve\+\_\+dsyevx}}
+\index{solve\+\_\+dsyevx@{solve\+\_\+dsyevx}!module\+\_\+solve@{module\+\_\+solve}}
+\subsubsection[{solve\+\_\+dsyevx}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+solve\+::solve\+\_\+dsyevx (
+\begin{DoxyParamCaption}
+\item[{integer}]{k, }
+\item[{integer}]{N, }
+\item[{double precision, dimension(n,n)}]{A, }
+\item[{double precision, dimension(n,n)}]{Z, }
+\item[{integer}]{L\+W\+O\+R\+K, }
+\item[{integer}]{L\+I\+W\+O\+R\+K, }
+\item[{double precision, dimension(n)}]{W, }
+\item[{integer}]{M}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__solve_af9f9bed9d344018397cbc722f70a6bb0}
+
+\begin{DoxyParams}{Parameters}
+{\em A} & the affinity matrix \\
+\hline
+{\em Z} & the matrix of eigen vectors \\
+\hline
+{\em W} & \\
+\hline
+{\em k} & \\
+\hline
+{\em L\+I\+W\+O\+R\+K} & \\
+\hline
+{\em L\+W\+O\+R\+K} & \\
+\hline
+{\em M} & \\
+\hline
+{\em N} & \\
+\hline
+\end{DoxyParams}

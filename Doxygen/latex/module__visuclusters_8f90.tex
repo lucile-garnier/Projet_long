@@ -1,0 +1,22 @@
+\hypertarget{module__visuclusters_8f90}{}\section{module\+\_\+visuclusters.\+f90 File Reference}
+\label{module__visuclusters_8f90}\index{module\+\_\+visuclusters.\+f90@{module\+\_\+visuclusters.\+f90}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+module \hyperlink{namespacemodule__visuclusters}{module\+\_\+visuclusters}
+\begin{DoxyCompactList}\small\item\em Contains methods enabling writing results in a selected data file format (for now \+: Paraview or G\+M\+S\+H) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__visuclusters_ab68939a34024c66e1e7cc64a0dcf8736}{module\+\_\+visuclusters\+::read\+\_\+metadata} (params)
+\begin{DoxyCompactList}\small\item\em Reads a file containing metadata on the data and the computed clusters. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_adae3f4360febb54cb901ce9f591d8656}{module\+\_\+visuclusters\+::write\+\_\+partitioning} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Writes the geometry of the partitioning (Gmsh or Paraview) and calls the eponym function. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_a11320cacc6eae8f372b75e9ec61b38b6}{module\+\_\+visuclusters\+::write\+\_\+assignment} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Initializes the file of the partitionning. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_a426807700ec2991178bd989694a2ff17}{module\+\_\+visuclusters\+::write\+\_\+partial\+\_\+clusters} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters before grouping by calling the corresponding method (Gmsh or Paraview) \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_adf901cfd1bc769cadd3558369594b074}{module\+\_\+visuclusters\+::write\+\_\+final\+\_\+clusters} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters after grouping by calling the corresponding method (Gmsh or Paraview) \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_aeed2c5753cf8c47dadf20e55474c830b}{module\+\_\+visuclusters\+::list\+\_\+commands} (format\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Lists the commands related to Gmsh or Paraview depending on the input parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}

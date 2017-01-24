@@ -1,0 +1,32 @@
+
+BINDIR=../../bin
+
+#****************************************
+#mpich
+MPIF90=mpiifort
+LIBPATH= 
+INCLUDE=
+#****************************************
+
+#****************************************
+#Lapack
+LIBLAPACK = -mkl=cluster
+#****************************************
+
+#****************************************
+#Arpack
+INCARP = -I${HOME}/opt/arpack/include
+LIBARP = -L${HOME}/opt/arpack/lib -larpack_EOS
+#****************************************
+
+
+#****************************************
+#Compilateur Fortran 90
+	F90=mpiifort
+
+#Parametres de compilation
+	#OPTIONS=-fpp -Daff=.false. -check all -traceback
+	OPTIONS=-fpp -Daff=.true.
+	FLAGS=-O
+#****************************************
+

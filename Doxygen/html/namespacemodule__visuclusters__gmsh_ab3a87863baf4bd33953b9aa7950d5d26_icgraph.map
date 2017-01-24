@@ -1,0 +1,8 @@
+<map id="module_visuclusters_gmsh::write_point_coord_format" name="module_visuclusters_gmsh::write_point_coord_format">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__gmsh.html#a3771400a4e195904654e041eef83247f" title="Initializes the file of the partitioning for Gmsh visualization. " alt="" coords="229,5,438,47"/>
+<area shape="rect" id="node4" href="$namespacemodule__visuclusters__gmsh.html#af04ca060cedb92fb755fd6cbb1330011" title="Writes the clusters before grouping for Gmsh visualization. " alt="" coords="264,71,403,127"/>
+<area shape="rect" id="node6" href="$namespacemodule__visuclusters__gmsh.html#a3fe1790e0267b255e689ead80e6c8ca8" title="Writes the clusters after grouping for Gmsh visualization. " alt="" coords="224,152,443,193"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters.html#a11320cacc6eae8f372b75e9ec61b38b6" title="Initializes the file of the partitionning. " alt="" coords="497,5,636,47"/>
+<area shape="rect" id="node5" href="$namespacemodule__visuclusters.html#a426807700ec2991178bd989694a2ff17" title="Writes the clusters before grouping by calling the corresponding method (Gmsh or Paraview) ..." alt="" coords="491,79,643,120"/>
+<area shape="rect" id="node7" href="$namespacemodule__visuclusters.html#adf901cfd1bc769cadd3558369594b074" title="Writes the clusters after grouping by calling the corresponding method (Gmsh or Paraview) ..." alt="" coords="497,152,637,193"/>
+</map>

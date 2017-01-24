@@ -1,0 +1,202 @@
+\hypertarget{namespacemodule__sortie}{}\section{module\+\_\+sortie Module Reference}
+\label{namespacemodule__sortie}\index{module\+\_\+sortie@{module\+\_\+sortie}}
+
+
+Contains methods enabling writing results in specific formatted files.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__sortie_a835f7338c29161d6893c6bbddf4174f4}{write\+\_\+domains} (data, nb\+\_\+proc, domains)
+\begin{DoxyCompactList}\small\item\em Writes the file containing the domain definitions. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}{write\+\_\+partitioning} (nb\+\_\+proc, data, points\+\_\+by\+\_\+domain, assignements)
+\begin{DoxyCompactList}\small\item\em Writes the files containing the partitionning. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__sortie_a24e663b5fc236eee7c6fe434493e342e}{write\+\_\+partial\+\_\+clusters} (proc\+\_\+id, partitioned\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Writes the file containing the clusters computed by the process. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__sortie_a819ceed76e9600e8eec63a7b730d1d92}{write\+\_\+final\+\_\+clusters} (nb\+\_\+clusters, points\+\_\+by\+\_\+cluster, cluster\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Writes the files containing the final clusters after grouping. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__sortie_a3093c50035046621188d9a0da3b8a587}{write\+\_\+metadata} (mesh, data, nb\+\_\+proc, nb\+\_\+clusters)
+\begin{DoxyCompactList}\small\item\em Writes a file containing various information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains methods enabling writing results in specific formatted files. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__sortie_a835f7338c29161d6893c6bbddf4174f4}{}\index{module\+\_\+sortie@{module\+\_\+sortie}!write\+\_\+domains@{write\+\_\+domains}}
+\index{write\+\_\+domains@{write\+\_\+domains}!module\+\_\+sortie@{module\+\_\+sortie}}
+\subsubsection[{write\+\_\+domains}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sortie\+::write\+\_\+domains (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{integer}]{nb\+\_\+proc, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{domains}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sortie_a835f7338c29161d6893c6bbddf4174f4}
+
+
+Writes the file containing the domain definitions. 
+
+This methods writes the domain definitions using the following formatting\+: each line contains the two point coordinates of a bound separated by the character \char`\"{}$\vert$\char`\"{}. \begin{DoxyNote}{Note}
+The written file is {\itshape fort.\+2}.S 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em domains} & the domains constructed from the bounds \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__sortie_a835f7338c29161d6893c6bbddf4174f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__sortie_a819ceed76e9600e8eec63a7b730d1d92}{}\index{module\+\_\+sortie@{module\+\_\+sortie}!write\+\_\+final\+\_\+clusters@{write\+\_\+final\+\_\+clusters}}
+\index{write\+\_\+final\+\_\+clusters@{write\+\_\+final\+\_\+clusters}!module\+\_\+sortie@{module\+\_\+sortie}}
+\subsubsection[{write\+\_\+final\+\_\+clusters}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sortie\+::write\+\_\+final\+\_\+clusters (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+clusters, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+cluster, }
+\item[{integer, dimension(\+:,\+:), pointer}]{cluster\+\_\+map}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sortie_a819ceed76e9600e8eec63a7b730d1d92}
+
+
+Writes the files containing the final clusters after grouping. 
+
+Each file correspond to a cluster. The first number is the number of points in the cluster. Then all the following numbers are the indices of the points that belongs to the cluster. \begin{DoxyNote}{Note}
+The written files are {\itshape cluster.\+final.\+x} with x the ids of the clusters. 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cluster\+\_\+map} & the cluster indices and the number of points in each cluster \\
+\hline
+\mbox{\tt in}  & {\em points\+\_\+by\+\_\+cluster} & the number of points in each cluster \\
+\hline
+\mbox{\tt in,out}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in,out}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in,out}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__sortie_a3093c50035046621188d9a0da3b8a587}{}\index{module\+\_\+sortie@{module\+\_\+sortie}!write\+\_\+metadata@{write\+\_\+metadata}}
+\index{write\+\_\+metadata@{write\+\_\+metadata}!module\+\_\+sortie@{module\+\_\+sortie}}
+\subsubsection[{write\+\_\+metadata}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sortie\+::write\+\_\+metadata (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{mesh, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{integer}]{nb\+\_\+proc, }
+\item[{integer}]{nb\+\_\+clusters}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sortie_a3093c50035046621188d9a0da3b8a587}
+
+
+Writes a file containing various information. 
+
+The following information is written in {\itshape fort.\+3} file \+: 
+\begin{DoxyEnumerate}
+\item The data file name  
+\item The number of the points in the entire data set  
+\item The number of processes used  
+\item The partitioning mode (by interface or overlapping)  
+\item The number of clusters found  
+\item The data file format  
+\end{DoxyEnumerate}In the case of a picture format\+: this extra information is written \+: 
+\begin{DoxyEnumerate}
+\item The image dimension  
+\item The image partitioning  
+\item The number of attributes  
+\item The number of steps (only in geometric format)  
+\end{DoxyEnumerate}\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__visuclusters_ab68939a34024c66e1e7cc64a0dcf8736}{read\+\_\+metadata()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em input\+\_\+file} & the name of the text file where input data is written \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__sortie_a24e663b5fc236eee7c6fe434493e342e}{}\index{module\+\_\+sortie@{module\+\_\+sortie}!write\+\_\+partial\+\_\+clusters@{write\+\_\+partial\+\_\+clusters}}
+\index{write\+\_\+partial\+\_\+clusters@{write\+\_\+partial\+\_\+clusters}!module\+\_\+sortie@{module\+\_\+sortie}}
+\subsubsection[{write\+\_\+partial\+\_\+clusters}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sortie\+::write\+\_\+partial\+\_\+clusters (
+\begin{DoxyParamCaption}
+\item[{integer}]{proc\+\_\+id, }
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sortie_a24e663b5fc236eee7c6fe434493e342e}
+
+
+Writes the file containing the clusters computed by the process. 
+
+The file starts with the number of points in the domain and the number of dimensions separated by a blank space. The following lines are \+: 
+\begin{DoxyItemize}
+\item {\bfseries  For coordinates format } \+: the coordinates of a point and the id of the cluster which it belongs to separated by a comma  
+\item {\bfseries  For picture formats } \+: the id of the point and the id of the cluster which it belongs to separated by a comma 
+\end{DoxyItemize}\begin{DoxyNote}{Note}
+The written file is {\itshape cluster.\+partiel.\+x} with x the id of the process 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em partitioned\+\_\+data} & the partitioned data for computing \\
+\hline
+\mbox{\tt in}  & {\em proc\+\_\+id} & the processus identifier \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}{}\index{module\+\_\+sortie@{module\+\_\+sortie}!write\+\_\+partitioning@{write\+\_\+partitioning}}
+\index{write\+\_\+partitioning@{write\+\_\+partitioning}!module\+\_\+sortie@{module\+\_\+sortie}}
+\subsubsection[{write\+\_\+partitioning}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+sortie\+::write\+\_\+partitioning (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+proc, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+domain, }
+\item[{integer, dimension(\+:,\+:), pointer}]{assignements}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}
+
+
+Writes the files containing the partitionning. 
+
+Each file correspond to a domain. The first number is the number of points in the domain. Then the following lines are simply the coordinates of the points (in case of coordinates format) or the color of the pixels (in case of picture format) separated by blank spaces. \begin{DoxyNote}{Note}
+The written files are {\itshape decoupe.\+x} with x the ids of the processes. 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em assignements} & the assignement of each point in a partition \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\mbox{\tt in}  & {\em points\+\_\+by\+\_\+domain} & the number of points in each partition \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117_icgraph}
+\end{center}
+\end{figure}
+
+

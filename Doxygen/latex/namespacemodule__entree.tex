@@ -1,0 +1,291 @@
+\hypertarget{namespacemodule__entree}{}\section{module\+\_\+entree Module Reference}
+\label{namespacemodule__entree}\index{module\+\_\+entree@{module\+\_\+entree}}
+
+
+Contains methods enabling data and parameter file reading.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__entree_ae91fc1d896afb27c01d7314dce81db70}{help}
+\begin{DoxyCompactList}\small\item\em Displays help on used formats and keywords for {\itshape param.\+in} file. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__entree_a4a8eec4484896ca8cb249548e1cf537f}{read\+\_\+params} (data, epsilon, coord\+\_\+min, coord\+\_\+max, nb\+\_\+proc, partitioning, input\+\_\+file, sigma, nb\+\_\+clusters\+\_\+max, list\+\_\+nb\+\_\+clusters, clust\+\_\+param)
+\begin{DoxyCompactList}\small\item\em Reads a file in which there is the whole information on the data. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__entree_a93d220ea64cd5e1d155255bca188de0c}{read\+\_\+coordinates\+\_\+data} (input\+\_\+file, data, coord\+\_\+min, coord\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Reads data written in coordinates format. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__entree_aaa0e9ef36218a32292aa65a9b8602cda}{read\+\_\+picture\+\_\+data} (input\+\_\+file, data, coord\+\_\+min, coord\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Reads data written in picture format. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__entree_ae5047aaa626b5cac3c9f98267f502669}{read\+\_\+geometric\+\_\+data} (input\+\_\+file, data, coord\+\_\+min, coord\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Reads data written in geometric format. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__entree_a25df009403bc610c2ef3b3a151574979}{read\+\_\+threshold\+\_\+data} (input\+\_\+file, data, coord\+\_\+min, coord\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Reads data written in threshold format. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__entree_a08bc5eb1225bf568c94df30b22f04e03}{assign\+\_\+picture\+\_\+array} (data)
+\begin{DoxyCompactList}\small\item\em Puts the index number of the pixels into an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains methods enabling data and parameter file reading. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__entree_a08bc5eb1225bf568c94df30b22f04e03}{}\index{module\+\_\+entree@{module\+\_\+entree}!assign\+\_\+picture\+\_\+array@{assign\+\_\+picture\+\_\+array}}
+\index{assign\+\_\+picture\+\_\+array@{assign\+\_\+picture\+\_\+array}!module\+\_\+entree@{module\+\_\+entree}}
+\subsubsection[{assign\+\_\+picture\+\_\+array}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+entree\+::assign\+\_\+picture\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{data}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__entree_a08bc5eb1225bf568c94df30b22f04e03}
+
+
+Puts the index number of the pixels into an array. 
+
+Each point of the data set is mapped to an array corresponding to an image. Thus, instead of one index for accessing one point, two will be used (row and column). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em data} & the entire data for computing \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{namespacemodule__entree_a08bc5eb1225bf568c94df30b22f04e03_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__entree_ae91fc1d896afb27c01d7314dce81db70}{}\index{module\+\_\+entree@{module\+\_\+entree}!help@{help}}
+\index{help@{help}!module\+\_\+entree@{module\+\_\+entree}}
+\subsubsection[{help}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+entree\+::help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__entree_ae91fc1d896afb27c01d7314dce81db70}
+
+
+Displays help on used formats and keywords for {\itshape param.\+in} file. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{namespacemodule__entree_ae91fc1d896afb27c01d7314dce81db70_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__entree_a93d220ea64cd5e1d155255bca188de0c}{}\index{module\+\_\+entree@{module\+\_\+entree}!read\+\_\+coordinates\+\_\+data@{read\+\_\+coordinates\+\_\+data}}
+\index{read\+\_\+coordinates\+\_\+data@{read\+\_\+coordinates\+\_\+data}!module\+\_\+entree@{module\+\_\+entree}}
+\subsubsection[{read\+\_\+coordinates\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+entree\+::read\+\_\+coordinates\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{input\+\_\+file, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+min, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+max}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__entree_a93d220ea64cd5e1d155255bca188de0c}
+
+
+Reads data written in coordinates format. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{namespacemodule__entree_a93d220ea64cd5e1d155255bca188de0c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__entree_ae5047aaa626b5cac3c9f98267f502669}{}\index{module\+\_\+entree@{module\+\_\+entree}!read\+\_\+geometric\+\_\+data@{read\+\_\+geometric\+\_\+data}}
+\index{read\+\_\+geometric\+\_\+data@{read\+\_\+geometric\+\_\+data}!module\+\_\+entree@{module\+\_\+entree}}
+\subsubsection[{read\+\_\+geometric\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+entree\+::read\+\_\+geometric\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{input\+\_\+file, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+min, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+max}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__entree_ae5047aaa626b5cac3c9f98267f502669}
+
+
+Reads data written in geometric format. 
+
+This type of file starts with two {\itshape integers} separated by a blank space\+: the first one corresponds to the dimension of the image and the second one the number of attributes (typically, the attributes could be the color channel intensities). The following line is composed of two {\itshape integers} separated by a blank space\+: the first one corresponds to the number of pixels in a column and the second one to the number of pixels in a row. Then, next lines are composed of {\itshape double} numbers separated by blank spaces. Each of these lines corresponds to the value of the attributes for each pixel. The coordinates of the pixels are implicit as they are ordered by rows. \begin{DoxyNote}{Note}
+The attributes and the coordinates are stored in the field \hyperlink{structmodule__structure_1_1type__data_ac7205be3a73581de07ce87c73512e053}{type\+\_\+data\+::coord} and so the position A\+N\+D the color will be taken into account. 
+
+The partitioning is made according to the coordinates 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__entree_a08bc5eb1225bf568c94df30b22f04e03}{assign\+\_\+picture\+\_\+array()}, \hyperlink{namespacemodule__entree_a93d220ea64cd5e1d155255bca188de0c}{read\+\_\+coordinates\+\_\+data()}, \hyperlink{namespacemodule__entree_a25df009403bc610c2ef3b3a151574979}{read\+\_\+threshold\+\_\+data()}, \hyperlink{namespacemodule__entree_aaa0e9ef36218a32292aa65a9b8602cda}{read\+\_\+picture\+\_\+data} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em input\+\_\+file} & the name of the text file where input data is written \\
+\hline
+\mbox{\tt in,out}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+max} & the maxima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+min} & the minima along each dimension of the data (coordinates) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{namespacemodule__entree_ae5047aaa626b5cac3c9f98267f502669_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__entree_a4a8eec4484896ca8cb249548e1cf537f}{}\index{module\+\_\+entree@{module\+\_\+entree}!read\+\_\+params@{read\+\_\+params}}
+\index{read\+\_\+params@{read\+\_\+params}!module\+\_\+entree@{module\+\_\+entree}}
+\subsubsection[{read\+\_\+params}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+entree\+::read\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision}]{epsilon, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+min, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+max, }
+\item[{integer}]{nb\+\_\+proc, }
+\item[{integer, dimension(\+:), pointer}]{partitioning, }
+\item[{character (len=30)}]{input\+\_\+file, }
+\item[{double precision}]{sigma, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+max, }
+\item[{integer, dimension(\+:), pointer}]{list\+\_\+nb\+\_\+clusters, }
+\item[{type({\bf type\+\_\+clustering\+\_\+param})}]{clust\+\_\+param}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__entree_a4a8eec4484896ca8cb249548e1cf537f}
+
+
+Reads a file in which there is the whole information on the data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\mbox{\tt in,out}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt out}  & {\em input\+\_\+file} & the name of the text file where input data is written \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+max} & the maxima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+min} & the minima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt out}  & {\em epsilon} & the slice thickness \\
+\hline
+\mbox{\tt out}  & {\em sigma} & the affinity parameter \\
+\hline
+\mbox{\tt out}  & {\em nb\+\_\+clusters\+\_\+max} & the maximum number of clusters \\
+\hline
+\mbox{\tt out}  & {\em list\+\_\+nb\+\_\+clusters} & the imposed numbers of clusters list for testing purpose (useless) \\
+\hline
+\mbox{\tt out}  & {\em partitioning} & the partitionning (number of processors along each dimension) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{namespacemodule__entree_a4a8eec4484896ca8cb249548e1cf537f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__entree_aaa0e9ef36218a32292aa65a9b8602cda}{}\index{module\+\_\+entree@{module\+\_\+entree}!read\+\_\+picture\+\_\+data@{read\+\_\+picture\+\_\+data}}
+\index{read\+\_\+picture\+\_\+data@{read\+\_\+picture\+\_\+data}!module\+\_\+entree@{module\+\_\+entree}}
+\subsubsection[{read\+\_\+picture\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+entree\+::read\+\_\+picture\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{input\+\_\+file, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+min, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+max}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__entree_aaa0e9ef36218a32292aa65a9b8602cda}
+
+
+Reads data written in picture format. 
+
+This type of file starts with two {\itshape integers} separated by a blank space\+: the first one corresponds to the dimension of the image and the second one the number of attributes (typically, the attributes could be the color channel intensities). The following line is composed of two {\itshape integers} separated by a blank space\+: the first one corresponds to the number of pixels in a column and the second one to the number of pixels in a row. Then, next lines are composed of {\itshape double} numbers separated by blank spaces. Each of these lines corresponds to the value of the attributes for each pixel. The coordinates of the pixels are implicit as they are ordered by rows. \begin{DoxyNote}{Note}
+The attributes are stored in the field \hyperlink{structmodule__structure_1_1type__data_ac7205be3a73581de07ce87c73512e053}{type\+\_\+data\+::coord} and so O\+N\+L\+Y the color will be taken into account. 
+
+The outputs {\itshape coordmax} and {\itshape coordmin} are computed according to the position of the pixels. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__entree_a08bc5eb1225bf568c94df30b22f04e03}{assign\+\_\+picture\+\_\+array()}, \hyperlink{namespacemodule__entree_a93d220ea64cd5e1d155255bca188de0c}{read\+\_\+coordinates\+\_\+data()}, \hyperlink{namespacemodule__entree_a25df009403bc610c2ef3b3a151574979}{read\+\_\+threshold\+\_\+data()}, \hyperlink{namespacemodule__entree_ae5047aaa626b5cac3c9f98267f502669}{read\+\_\+geometric\+\_\+data} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em input\+\_\+file} & the name of the text file where input data is written \\
+\hline
+\mbox{\tt in,out}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+max} & the maxima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+min} & the minima along each dimension of the data (coordinates) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{namespacemodule__entree_aaa0e9ef36218a32292aa65a9b8602cda_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__entree_a25df009403bc610c2ef3b3a151574979}{}\index{module\+\_\+entree@{module\+\_\+entree}!read\+\_\+threshold\+\_\+data@{read\+\_\+threshold\+\_\+data}}
+\index{read\+\_\+threshold\+\_\+data@{read\+\_\+threshold\+\_\+data}!module\+\_\+entree@{module\+\_\+entree}}
+\subsubsection[{read\+\_\+threshold\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+entree\+::read\+\_\+threshold\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{input\+\_\+file, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+min, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+max}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__entree_a25df009403bc610c2ef3b3a151574979}
+
+
+Reads data written in threshold format. 
+
+This type of file starts with two {\itshape integers} separated by a blank space\+: the first one corresponds to the dimension of the image and the second one the number of attributes (typically, the attributes could be the color channel intensities). The following line is composed of two {\itshape integers} separated by a blank space\+: the first one corresponds to the number of pixels in a column and the second one to the number of pixels in a row. Then, next lines are composed of {\itshape double} numbers separated by blank spaces. Each of these lines corresponds to the value of the attributes for each pixel. The coordinates of the pixels are implicit as they are ordered by rows. \begin{DoxyNote}{Note}
+The attributes are stored in the field \hyperlink{structmodule__structure_1_1type__data_ac7205be3a73581de07ce87c73512e053}{type\+\_\+data\+::coord} and so O\+N\+L\+Y the color will be taken into account 
+
+The outputs {\itshape coordmax} and {\itshape coordmin} are computed according to the color of the pixels. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__entree_a08bc5eb1225bf568c94df30b22f04e03}{assign\+\_\+picture\+\_\+array()}, \hyperlink{namespacemodule__entree_aaa0e9ef36218a32292aa65a9b8602cda}{read\+\_\+picture\+\_\+data()}, \hyperlink{namespacemodule__entree_a93d220ea64cd5e1d155255bca188de0c}{read\+\_\+coordinates\+\_\+data()}, \hyperlink{namespacemodule__entree_ae5047aaa626b5cac3c9f98267f502669}{read\+\_\+geometric\+\_\+data} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em input\+\_\+file} & the name of the text file where input data is written \\
+\hline
+\mbox{\tt in,out}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+max} & the maxima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt out}  & {\em coord\+\_\+min} & the minima along each dimension of the data (coordinates) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{namespacemodule__entree_a25df009403bc610c2ef3b3a151574979_icgraph}
+\end{center}
+\end{figure}
+
+

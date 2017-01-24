@@ -1,0 +1,4 @@
+<map id="module_visuclusters::write_partitioning" name="module_visuclusters::write_partitioning">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__gmsh.html#a2ffd04d2e2dcdda290446affaf3a76dc" title="Writes the geometry partitioning for Gmsh visualization. " alt="" coords="192,5,397,47"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters__paraview.html#a57010b34c7586dcf52fb9f50e2e1d7aa" title="Writes the geometry partitioning for Paraview visualization. " alt="" coords="203,71,386,127"/>
+</map>

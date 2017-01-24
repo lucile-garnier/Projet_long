@@ -1,0 +1,8 @@
+<map id="module_visuclusters::write_partial_clusters" name="module_visuclusters::write_partial_clusters">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__gmsh.html#af04ca060cedb92fb755fd6cbb1330011" title="Writes the clusters before the groupping in Gmsh format. " alt="" coords="213,71,352,127"/>
+<area shape="rect" id="node5" href="$namespacemodule__visuclusters__paraview.html#abed87b4c957689d9cfdc62811f3b213b" title="Writes the clusters before the groupping in Paraview format. " alt="" coords="205,151,360,207"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters__gmsh.html#a8796cf9ca24e8ba48dd8bb75cbade6d3" title="Writes points in Gmsh format. " alt="" coords="408,5,569,47"/>
+<area shape="rect" id="node4" href="$namespacemodule__visuclusters__gmsh.html#a1e757e4155e8c02b95c594bb26a69f8a" title="Writes points from picture format to Gmsh format. " alt="" coords="417,71,560,127"/>
+<area shape="rect" id="node6" href="$namespacemodule__visuclusters__paraview.html#aa8cca384fd7f367801e6c6d027cc9690" title="Writes points in Paraview format. " alt="" coords="419,151,558,207"/>
+<area shape="rect" id="node7" href="$namespacemodule__visuclusters__paraview.html#a1a8c69e82b7e3611685df6536097ba5b" title="Writes points from picture format to Paraview format. " alt="" coords="409,231,568,287"/>
+</map>

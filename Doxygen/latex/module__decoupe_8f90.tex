@@ -1,0 +1,22 @@
+\hypertarget{module__decoupe_8f90}{}\section{module\+\_\+decoupe.\+f90 File Reference}
+\label{module__decoupe_8f90}\index{module\+\_\+decoupe.\+f90@{module\+\_\+decoupe.\+f90}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+module \hyperlink{namespacemodule__decoupe}{module\+\_\+decoupe}
+\begin{DoxyCompactList}\small\item\em Contains methods enabling the partitionning and the groupping of the data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__decoupe_a20e9d554b6d62aa1aac7be71c223132e}{module\+\_\+decoupe\+::partition\+\_\+data} (data, epsilon, nb\+\_\+proc, coord\+\_\+min, coord\+\_\+max, partitioning, points\+\_\+by\+\_\+domain, assignements, bounds)
+\begin{DoxyCompactList}\small\item\em Partitions the data into subdomains for a latter processing by the slaves. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_ab1bd43de3891732cdf5803c4d86544dd}{module\+\_\+decoupe\+::define\+\_\+bounds} (data, coord\+\_\+min, coord\+\_\+max, bounds, partitioning, epsilon, nb\+\_\+proc)
+\begin{DoxyCompactList}\small\item\em Defines the bounds of each subdomain. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_afc4d3c1d1e2c287779200be5cf9d8205}{module\+\_\+decoupe\+::define\+\_\+domains} (nb\+\_\+proc, data, domains, bounds, partitioning)
+\begin{DoxyCompactList}\small\item\em Defines the different subdomains. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66}{module\+\_\+decoupe\+::partition\+\_\+with\+\_\+interface} (nb\+\_\+proc, data, points\+\_\+by\+\_\+domain, assignements, domains, epsilon)
+\begin{DoxyCompactList}\small\item\em Partitions the data using interface. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_a6f29dcc8367ffa44fa720260882fa04e}{module\+\_\+decoupe\+::partition\+\_\+with\+\_\+overlapping} (nb\+\_\+proc, data, points\+\_\+by\+\_\+domain, assignements, domains)
+\begin{DoxyCompactList}\small\item\em Partitions the data using overlapping. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_af5369423cd2f8c975e68cbc08c7b31c1}{module\+\_\+decoupe\+::group\+\_\+clusters} (nb\+\_\+clusters, points\+\_\+by\+\_\+cluster, cluster\+\_\+map, data)
+\begin{DoxyCompactList}\small\item\em Groups the clusters and removes duplicates from the set of found clusters. \end{DoxyCompactList}\end{DoxyCompactItemize}

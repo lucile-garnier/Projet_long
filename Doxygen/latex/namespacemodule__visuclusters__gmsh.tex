@@ -1,0 +1,272 @@
+\hypertarget{namespacemodule__visuclusters__gmsh}{}\section{module\+\_\+visuclusters\+\_\+gmsh Module Reference}
+\label{namespacemodule__visuclusters__gmsh}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+
+
+Contains methods enabling writing results in file specifically formatted for G\+M\+S\+H.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__visuclusters__gmsh_a2ffd04d2e2dcdda290446affaf3a76dc}{write\+\_\+partitioning\+\_\+gmsh} (params)
+\begin{DoxyCompactList}\small\item\em Writes the geometry partitioning for Gmsh visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__gmsh_a3771400a4e195904654e041eef83247f}{write\+\_\+assignment\+\_\+gmsh} (params)
+\begin{DoxyCompactList}\small\item\em Initializes the file of the partitioning for Gmsh visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__gmsh_af04ca060cedb92fb755fd6cbb1330011}{write\+\_\+partial\+\_\+clusters\+\_\+gmsh} (params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters before grouping for Gmsh visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__gmsh_a3fe1790e0267b255e689ead80e6c8ca8}{write\+\_\+final\+\_\+clusters\+\_\+gmsh} (params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters after grouping for Gmsh visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__gmsh_ab3a87863baf4bd33953b9aa7950d5d26}{write\+\_\+point\+\_\+coord\+\_\+format} (unit, dim, coords, id, k)
+\begin{DoxyCompactList}\small\item\em Writes point coordinates from coordinates format for Gmsh visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__gmsh_aa00f636e7ea0ae13557bdf9fa21b285f}{write\+\_\+point\+\_\+picture\+\_\+format} (unit, params, id, k)
+\begin{DoxyCompactList}\small\item\em Writes point coordinates from picture format for Gmsh visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__gmsh_af4df8b9f65af2acfbc5489b6e299cfde}{list\+\_\+commands\+\_\+gmsh}
+\begin{DoxyCompactList}\small\item\em Lists the commands related to Gmsh visualization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains methods enabling writing results in file specifically formatted for G\+M\+S\+H. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__visuclusters__gmsh_af4df8b9f65af2acfbc5489b6e299cfde}{}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}!list\+\_\+commands\+\_\+gmsh@{list\+\_\+commands\+\_\+gmsh}}
+\index{list\+\_\+commands\+\_\+gmsh@{list\+\_\+commands\+\_\+gmsh}!module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+\subsubsection[{list\+\_\+commands\+\_\+gmsh}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+gmsh\+::list\+\_\+commands\+\_\+gmsh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__gmsh_af4df8b9f65af2acfbc5489b6e299cfde}
+
+
+Lists the commands related to Gmsh visualization. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_af4df8b9f65af2acfbc5489b6e299cfde_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__gmsh_a3771400a4e195904654e041eef83247f}{}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}!write\+\_\+assignment\+\_\+gmsh@{write\+\_\+assignment\+\_\+gmsh}}
+\index{write\+\_\+assignment\+\_\+gmsh@{write\+\_\+assignment\+\_\+gmsh}!module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+\subsubsection[{write\+\_\+assignment\+\_\+gmsh}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+gmsh\+::write\+\_\+assignment\+\_\+gmsh (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__gmsh_a3771400a4e195904654e041eef83247f}
+
+
+Initializes the file of the partitioning for Gmsh visualization. 
+
+This method extracts details on partitioning from the {\itshape decoupe.\+x} files and writes them in {\itshape decoupe.\+visu} file. \begin{DoxyNote}{Note}
+{\itshape x} is the identifier (number) of a process. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}{write\+\_\+partitioning()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_a3771400a4e195904654e041eef83247f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_a3771400a4e195904654e041eef83247f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__gmsh_a3fe1790e0267b255e689ead80e6c8ca8}{}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}!write\+\_\+final\+\_\+clusters\+\_\+gmsh@{write\+\_\+final\+\_\+clusters\+\_\+gmsh}}
+\index{write\+\_\+final\+\_\+clusters\+\_\+gmsh@{write\+\_\+final\+\_\+clusters\+\_\+gmsh}!module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+\subsubsection[{write\+\_\+final\+\_\+clusters\+\_\+gmsh}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+gmsh\+::write\+\_\+final\+\_\+clusters\+\_\+gmsh (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__gmsh_a3fe1790e0267b255e689ead80e6c8ca8}
+
+
+Writes the clusters after grouping for Gmsh visualization. 
+
+This methods extracts details on computed clusters from {\itshape cluster.\+final.\+x} files and writes them in {\itshape cluster.\+final.\+visu} file. \begin{DoxyNote}{Note}
+{\itshape x} is the identifier (number) of a cluster. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_a819ceed76e9600e8eec63a7b730d1d92}{module\+\_\+calcul\+::write\+\_\+final\+\_\+clusters()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_a3fe1790e0267b255e689ead80e6c8ca8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_a3fe1790e0267b255e689ead80e6c8ca8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__gmsh_af04ca060cedb92fb755fd6cbb1330011}{}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}!write\+\_\+partial\+\_\+clusters\+\_\+gmsh@{write\+\_\+partial\+\_\+clusters\+\_\+gmsh}}
+\index{write\+\_\+partial\+\_\+clusters\+\_\+gmsh@{write\+\_\+partial\+\_\+clusters\+\_\+gmsh}!module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+\subsubsection[{write\+\_\+partial\+\_\+clusters\+\_\+gmsh}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+gmsh\+::write\+\_\+partial\+\_\+clusters\+\_\+gmsh (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__gmsh_af04ca060cedb92fb755fd6cbb1330011}
+
+
+Writes the clusters before grouping for Gmsh visualization. 
+
+This methods extracts details on computed clusters on each domain from {\itshape cluster.\+partiel.\+x} files and writes them in corresponding {\itshape cluster.\+partiel.\+x.\+visu} files. \begin{DoxyNote}{Note}
+{\itshape x} is the identifier (number) of a process. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_a24e663b5fc236eee7c6fe434493e342e}{module\+\_\+calcul\+::write\+\_\+partial\+\_\+clusters()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_af04ca060cedb92fb755fd6cbb1330011_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{namespacemodule__visuclusters__gmsh_af04ca060cedb92fb755fd6cbb1330011_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__gmsh_a2ffd04d2e2dcdda290446affaf3a76dc}{}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}!write\+\_\+partitioning\+\_\+gmsh@{write\+\_\+partitioning\+\_\+gmsh}}
+\index{write\+\_\+partitioning\+\_\+gmsh@{write\+\_\+partitioning\+\_\+gmsh}!module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+\subsubsection[{write\+\_\+partitioning\+\_\+gmsh}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+gmsh\+::write\+\_\+partitioning\+\_\+gmsh (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__gmsh_a2ffd04d2e2dcdda290446affaf3a76dc}
+
+
+Writes the geometry partitioning for Gmsh visualization. 
+
+This methods extracts the domain definitions from the {\itshape fort.\+2} file and writes to {\itshape decoupe.\+geo} file, a source code file. We refer you to a \href{linkURL}{\tt Gmsh tutorial}. \begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}{module\+\_\+calcul\+::write\+\_\+partitioning()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_a2ffd04d2e2dcdda290446affaf3a76dc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__gmsh_ab3a87863baf4bd33953b9aa7950d5d26}{}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}!write\+\_\+point\+\_\+coord\+\_\+format@{write\+\_\+point\+\_\+coord\+\_\+format}}
+\index{write\+\_\+point\+\_\+coord\+\_\+format@{write\+\_\+point\+\_\+coord\+\_\+format}!module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+\subsubsection[{write\+\_\+point\+\_\+coord\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+gmsh\+::write\+\_\+point\+\_\+coord\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{integer}]{unit, }
+\item[{integer}]{dim, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{coords, }
+\item[{integer}]{id, }
+\item[{integer}]{k}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__gmsh_ab3a87863baf4bd33953b9aa7950d5d26}
+
+
+Writes point coordinates from coordinates format for Gmsh visualization. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_ab3a87863baf4bd33953b9aa7950d5d26_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__gmsh_aa00f636e7ea0ae13557bdf9fa21b285f}{}\index{module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}!write\+\_\+point\+\_\+picture\+\_\+format@{write\+\_\+point\+\_\+picture\+\_\+format}}
+\index{write\+\_\+point\+\_\+picture\+\_\+format@{write\+\_\+point\+\_\+picture\+\_\+format}!module\+\_\+visuclusters\+\_\+gmsh@{module\+\_\+visuclusters\+\_\+gmsh}}
+\subsubsection[{write\+\_\+point\+\_\+picture\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+gmsh\+::write\+\_\+point\+\_\+picture\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{integer}]{unit, }
+\item[{type({\bf type\+\_\+params})}]{params, }
+\item[{integer}]{id, }
+\item[{integer}]{k}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__gmsh_aa00f636e7ea0ae13557bdf9fa21b285f}
+
+
+Writes point coordinates from picture format for Gmsh visualization. 
+
+The following is written in the file \+: 
+\begin{DoxyEnumerate}
+\item {\bfseries  For 2\+D case}\+: {\itshape  S\+P(x,y)\{id\} } 
+\item {\bfseries  For 3\+D case}\+: {\itshape  S\+P(x,y,z)\{id\} } 
+\end{DoxyEnumerate}\begin{DoxyNote}{Note}
+x,y and z are the coordinates and id is the identifier of the process 
+\end{DoxyNote}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__gmsh_aa00f636e7ea0ae13557bdf9fa21b285f_icgraph}
+\end{center}
+\end{figure}
+
+

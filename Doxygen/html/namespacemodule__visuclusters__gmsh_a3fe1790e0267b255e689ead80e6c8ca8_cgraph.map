@@ -1,0 +1,4 @@
+<map id="module_visuclusters_gmsh::write_final_clusters_gmsh" name="module_visuclusters_gmsh::write_final_clusters_gmsh">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__gmsh.html#ab3a87863baf4bd33953b9aa7950d5d26" title="Writes point coordinates from coordinates format for Gmsh visualization. " alt="" coords="275,5,446,61"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters__gmsh.html#aa00f636e7ea0ae13557bdf9fa21b285f" title="Writes point coordinates from picture format for Gmsh visualization. " alt="" coords="272,85,449,141"/>
+</map>

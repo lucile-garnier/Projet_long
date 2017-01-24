@@ -1,0 +1,6 @@
+<map id="module_embed::apply_kmeans" name="module_embed::apply_kmeans">
+<area shape="rect" id="node2" href="$namespacemodule__embed.html#ab78350f96b04d0ce2ca0bd10abd50440" title="Computes the clusters using eigen vector matrix. " alt="" coords="223,8,373,49"/>
+<area shape="rect" id="node4" href="$namespacemodule__sparse.html#a6fc2f45f94f4ea124ea27f88b8823274" title="Computes the ideal number of clusters using sparsity. " alt="" coords="203,75,393,116"/>
+<area shape="rect" id="node3" href="$namespacemodule__calcul.html#a7bf1a318c636b4e204f267103d00114a" title="module_calcul::apply\l_spectral_clustering" alt="" coords="444,5,588,47"/>
+<area shape="rect" id="node5" href="$namespacemodule__sparse.html#ac7a222921bd378c5d9d8d41fa05423ad" title="Computes the clusters using spectral clustering algorithm using sparsity. " alt="" coords="441,71,591,127"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="module_calcul::apply_spectral_clustering" name="module_calcul::apply_spectral_clustering">
+<area shape="rect" id="node2" href="$namespacemodule__solve.html#a2a2b6bf2dc5b4e3d08908fa43fca207b" title="module_solve::solve\l_dgeev" alt="" coords="211,5,348,47"/>
+<area shape="rect" id="node3" href="$namespacemodule__embed.html#ac931ed4eec78298b9fef7182ad24d68d" title="Computes the ideal number of clusters. " alt="" coords="197,71,361,112"/>
+<area shape="rect" id="node4" href="$namespacemodule__embed.html#a86d0e47b612c510f17d6e5f22ad4e543" title="Implements K&#45;Means algorithm (required by spectral clustering and Kernel K&#45;Means methods) ..." alt="" coords="409,71,559,112"/>
+</map>

@@ -1,0 +1,26 @@
+
+BINDIR=${HOME}/bin
+
+#****************************************
+#mpi
+#****************************************
+
+#****************************************
+#Lapack
+        LIBLAPACK = -llapack
+
+#****************************************
+#Arpack
+INCARP = -I/opt/arpack/include
+LIBARP = -L/opt/arpack/lib -larpack_linux
+
+#****************************************
+#Compilateur Fortran 90
+	MPIF90=mpif90
+	F90=mpif90
+
+#Parametres de compilation
+	OPTIONS=-cpp -Daff=false
+	FLAGS=-O3
+#****************************************
+

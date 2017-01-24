@@ -1,0 +1,6 @@
+<map id="module_embed::apply_kmeans" name="module_embed::apply_kmeans">
+<area shape="rect" id="node2" href="$namespacemodule__embed.html#ac931ed4eec78298b9fef7182ad24d68d" title="Computes the ideal number of clusters. " alt="" coords="213,5,377,47"/>
+<area shape="rect" id="node4" href="$namespacemodule__sparse.html#adb7951843bed471bce190692b102babd" title="Computes the ideal number of clusters using sparsity. " alt="" coords="203,71,388,112"/>
+<area shape="rect" id="node3" href="$namespacemodule__calcul.html#a0f616742dafe125c0e6be215e6e8f5b4" title="Computes the clusters using spectral clustering algorithm. " alt="" coords="473,5,617,47"/>
+<area shape="rect" id="node5" href="$namespacemodule__sparse.html#aabefe4e8590abefd661522a71cd03d68" title="Computes the clusters using spectral clustering algorithm using sparsity. " alt="" coords="436,78,655,105"/>
+</map>

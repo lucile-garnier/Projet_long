@@ -1,0 +1,8 @@
+<map id="module_visuclusters::affectation" name="module_visuclusters::affectation">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__gmsh.html#acd8c239db579411311e6363c884a0df2" title="Initializes the file of the partitionning in Gmsh format. " alt="" coords="192,79,359,120"/>
+<area shape="rect" id="node5" href="$namespacemodule__visuclusters__paraview.html#a37663e9b24a2747ba409b53a2715bb76" title="Initializes the file of the partitionning in Paraview format. " alt="" coords="203,151,348,207"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters__gmsh.html#a8796cf9ca24e8ba48dd8bb75cbade6d3" title="Writes points in Gmsh format. " alt="" coords="407,5,568,47"/>
+<area shape="rect" id="node4" href="$namespacemodule__visuclusters__gmsh.html#a1e757e4155e8c02b95c594bb26a69f8a" title="Writes points from picture format to Gmsh format. " alt="" coords="416,71,559,127"/>
+<area shape="rect" id="node6" href="$namespacemodule__visuclusters__paraview.html#aa8cca384fd7f367801e6c6d027cc9690" title="Writes points in Paraview format. " alt="" coords="418,151,557,207"/>
+<area shape="rect" id="node7" href="$namespacemodule__visuclusters__paraview.html#a1a8c69e82b7e3611685df6536097ba5b" title="Writes points from picture format to Paraview format. " alt="" coords="408,231,567,287"/>
+</map>

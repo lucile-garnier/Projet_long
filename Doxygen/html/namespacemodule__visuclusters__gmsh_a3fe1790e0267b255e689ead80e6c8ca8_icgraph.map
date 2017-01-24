@@ -1,0 +1,3 @@
+<map id="module_visuclusters_gmsh::write_final_clusters_gmsh" name="module_visuclusters_gmsh::write_final_clusters_gmsh">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters.html#adf901cfd1bc769cadd3558369594b074" title="Writes the clusters after grouping by calling the corresponding method (Gmsh or Paraview) ..." alt="" coords="272,5,412,47"/>
+</map>

@@ -1,0 +1,307 @@
+\hypertarget{namespacemodule__decoupe}{}\section{module\+\_\+decoupe Module Reference}
+\label{namespacemodule__decoupe}\index{module\+\_\+decoupe@{module\+\_\+decoupe}}
+
+
+Contains methods enabling the partitionning and the groupping of the data.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__decoupe_a20e9d554b6d62aa1aac7be71c223132e}{partition\+\_\+data} (data, epsilon, nb\+\_\+proc, coord\+\_\+min, coord\+\_\+max, partitioning, points\+\_\+by\+\_\+domain, assignements, bounds)
+\begin{DoxyCompactList}\small\item\em Partitions the data into subdomains for a latter processing by the slaves. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_ab1bd43de3891732cdf5803c4d86544dd}{define\+\_\+bounds} (data, coord\+\_\+min, coord\+\_\+max, bounds, partitioning, epsilon, nb\+\_\+proc)
+\begin{DoxyCompactList}\small\item\em Defines the bounds of each subdomain. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_afc4d3c1d1e2c287779200be5cf9d8205}{define\+\_\+domains} (nb\+\_\+proc, data, domains, bounds, partitioning)
+\begin{DoxyCompactList}\small\item\em Defines the different subdomains. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66}{partition\+\_\+with\+\_\+interface} (nb\+\_\+proc, data, points\+\_\+by\+\_\+domain, assignements, domains, epsilon)
+\begin{DoxyCompactList}\small\item\em Partitions the data using interface. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_a6f29dcc8367ffa44fa720260882fa04e}{partition\+\_\+with\+\_\+overlapping} (nb\+\_\+proc, data, points\+\_\+by\+\_\+domain, assignements, domains)
+\begin{DoxyCompactList}\small\item\em Partitions the data using overlapping. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__decoupe_af5369423cd2f8c975e68cbc08c7b31c1}{group\+\_\+clusters} (nb\+\_\+clusters, points\+\_\+by\+\_\+cluster, cluster\+\_\+map, data)
+\begin{DoxyCompactList}\small\item\em Groups the clusters and removes duplicates from the set of found clusters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains methods enabling the partitionning and the groupping of the data. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__decoupe_ab1bd43de3891732cdf5803c4d86544dd}{}\index{module\+\_\+decoupe@{module\+\_\+decoupe}!define\+\_\+bounds@{define\+\_\+bounds}}
+\index{define\+\_\+bounds@{define\+\_\+bounds}!module\+\_\+decoupe@{module\+\_\+decoupe}}
+\subsubsection[{define\+\_\+bounds}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+decoupe\+::define\+\_\+bounds (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+min, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+max, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{bounds, }
+\item[{integer, dimension(\+:), pointer}]{partitioning, }
+\item[{double precision}]{epsilon, }
+\item[{integer}]{nb\+\_\+proc}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__decoupe_ab1bd43de3891732cdf5803c4d86544dd}
+
+
+Defines the bounds of each subdomain. 
+
+The output {\itshape bounds} has to be interpreted as follows\+: 
+\begin{DoxyEnumerate}
+\item The first index corresponds to the dimensions  
+\item The second index corresponds to the partitioning along the dimension  
+\item The third index corresponds to the extrema of the bounds  
+\end{DoxyEnumerate}\begin{DoxyNote}{Note}
+The bounds are composed of two points. 
+
+In case of overlapping, the bounds overlapped each others. 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em epsilon} & the slice thickness \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\mbox{\tt in}  & {\em partitioning} & the partitionning (number of processors along each dimension) \\
+\hline
+\mbox{\tt in,out}  & {\em coord\+\_\+max} & the maxima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt in,out}  & {\em coord\+\_\+min} & the minima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt out}  & {\em bounds} & the intervals along each dimension representing the bounds of each partition \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__decoupe_ab1bd43de3891732cdf5803c4d86544dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__decoupe_afc4d3c1d1e2c287779200be5cf9d8205}{}\index{module\+\_\+decoupe@{module\+\_\+decoupe}!define\+\_\+domains@{define\+\_\+domains}}
+\index{define\+\_\+domains@{define\+\_\+domains}!module\+\_\+decoupe@{module\+\_\+decoupe}}
+\subsubsection[{define\+\_\+domains}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+decoupe\+::define\+\_\+domains (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+proc, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{domains, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{bounds, }
+\item[{integer, dimension(\+:), pointer}]{partitioning}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__decoupe_afc4d3c1d1e2c287779200be5cf9d8205}
+
+
+Defines the different subdomains. 
+
+The output {\itshape domains} has to be interpreted as follows\+: 
+\begin{DoxyEnumerate}
+\item The first index corresponds to the domain id 
+\item The second index corresponds to the dimensions  
+\item The third index corresponds to the extrema of the bounds  
+\end{DoxyEnumerate}\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__decoupe_ab1bd43de3891732cdf5803c4d86544dd}{define\+\_\+bounds()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em bounds} & the intervals along each dimension representing the bounds of each partition \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\mbox{\tt in}  & {\em partitioning} & the partitionning (number of processors along each dimension) \\
+\hline
+\mbox{\tt out}  & {\em domains} & the domains constructed from the bounds \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__decoupe_afc4d3c1d1e2c287779200be5cf9d8205_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__decoupe_af5369423cd2f8c975e68cbc08c7b31c1}{}\index{module\+\_\+decoupe@{module\+\_\+decoupe}!group\+\_\+clusters@{group\+\_\+clusters}}
+\index{group\+\_\+clusters@{group\+\_\+clusters}!module\+\_\+decoupe@{module\+\_\+decoupe}}
+\subsubsection[{group\+\_\+clusters}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+decoupe\+::group\+\_\+clusters (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+clusters, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+cluster, }
+\item[{integer, dimension(\+:,\+:), pointer}]{cluster\+\_\+map, }
+\item[{type({\bf type\+\_\+data})}]{data}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__decoupe_af5369423cd2f8c975e68cbc08c7b31c1}
+
+
+Groups the clusters and removes duplicates from the set of found clusters. 
+
+The method operates on all the computed clusters and when an intersection is found between two of them (at least one point in common), they are melted. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+clusters} & the number of clusters \\
+\hline
+\mbox{\tt in,out}  & {\em cluster\+\_\+map} & the cluster indices and the number of points in each cluster \\
+\hline
+\mbox{\tt in,out}  & {\em points\+\_\+by\+\_\+cluster} & the number of points in each cluster \\
+\hline
+\mbox{\tt out}  & {\em data} & the entire data for computing \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__decoupe_a20e9d554b6d62aa1aac7be71c223132e}{}\index{module\+\_\+decoupe@{module\+\_\+decoupe}!partition\+\_\+data@{partition\+\_\+data}}
+\index{partition\+\_\+data@{partition\+\_\+data}!module\+\_\+decoupe@{module\+\_\+decoupe}}
+\subsubsection[{partition\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+decoupe\+::partition\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{double precision}]{epsilon, }
+\item[{integer}]{nb\+\_\+proc, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+min, }
+\item[{double precision, dimension(\+:), pointer}]{coord\+\_\+max, }
+\item[{integer, dimension(\+:), pointer}]{partitioning, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+domain, }
+\item[{integer, dimension(\+:,\+:), pointer}]{assignements, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{bounds}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__decoupe_a20e9d554b6d62aa1aac7be71c223132e}
+
+
+Partitions the data into subdomains for a latter processing by the slaves. 
+
+The following is performed \+: 
+\begin{DoxyEnumerate}
+\item The bounds of each domain are defined (see \hyperlink{namespacemodule__decoupe_ab1bd43de3891732cdf5803c4d86544dd}{define\+\_\+bounds()}). 
+\item The domains are defined using the bounds (see \hyperlink{namespacemodule__decoupe_afc4d3c1d1e2c287779200be5cf9d8205}{define\+\_\+domains()}). 
+\item The domains are written in a dedicated file (see \hyperlink{namespacemodule__sortie_a835f7338c29161d6893c6bbddf4174f4}{write\+\_\+domains()}). 
+\item The data is partitioned using interface or overlapping (see \hyperlink{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66}{partition\+\_\+with\+\_\+interface()} and \hyperlink{namespacemodule__decoupe_a6f29dcc8367ffa44fa720260882fa04e}{partition\+\_\+with\+\_\+overlapping()}). 
+\item The partitioning is written in dedicated files (see \hyperlink{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}{write\+\_\+partitioning()}). 
+\end{DoxyEnumerate}
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em epsilon} & the slice thickness \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\mbox{\tt in}  & {\em partitioning} & the partitionning (number of processors along each dimension) \\
+\hline
+\mbox{\tt in,out}  & {\em coord\+\_\+max} & the maxima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt in,out}  & {\em coord\+\_\+min} & the minima along each dimension of the data (coordinates) \\
+\hline
+\mbox{\tt out}  & {\em bounds} & the intervals along each dimension representing the bounds of each partition \\
+\hline
+\mbox{\tt out}  & {\em assignements} & the assignement of each point in a partition \\
+\hline
+\mbox{\tt out}  & {\em points\+\_\+by\+\_\+domain} & the number of points in each partition \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__decoupe_a20e9d554b6d62aa1aac7be71c223132e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66}{}\index{module\+\_\+decoupe@{module\+\_\+decoupe}!partition\+\_\+with\+\_\+interface@{partition\+\_\+with\+\_\+interface}}
+\index{partition\+\_\+with\+\_\+interface@{partition\+\_\+with\+\_\+interface}!module\+\_\+decoupe@{module\+\_\+decoupe}}
+\subsubsection[{partition\+\_\+with\+\_\+interface}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+decoupe\+::partition\+\_\+with\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+proc, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+domain, }
+\item[{integer, dimension(\+:,\+:), pointer}]{assignements, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{domains, }
+\item[{double precision}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66}
+
+
+Partitions the data using interface. 
+
+The method partitions the entire data by defining which point belongs to which domain. It consists of a loop on all the point in data set. Then it \char`\"{}fills\char`\"{} the domains one after another using a nested loop. When a point does not fit the bounds define in the input {\itshape domains}, the algorithm switch to the next domain. Finally, an extra domain is defined (the interface) which corresponds to the area around the bounds with a predefined slice thickness. \begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__decoupe_a6f29dcc8367ffa44fa720260882fa04e}{partition\+\_\+with\+\_\+overlapping()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em domains} & the domains constructed from the bounds \\
+\hline
+\mbox{\tt in}  & {\em epsilon} & the slice thickness \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\mbox{\tt out}  & {\em assignements} & the assignement of each point in a partition \\
+\hline
+\mbox{\tt out}  & {\em points\+\_\+by\+\_\+domain} & the number of points in each partition \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__decoupe_a6f29dcc8367ffa44fa720260882fa04e}{}\index{module\+\_\+decoupe@{module\+\_\+decoupe}!partition\+\_\+with\+\_\+overlapping@{partition\+\_\+with\+\_\+overlapping}}
+\index{partition\+\_\+with\+\_\+overlapping@{partition\+\_\+with\+\_\+overlapping}!module\+\_\+decoupe@{module\+\_\+decoupe}}
+\subsubsection[{partition\+\_\+with\+\_\+overlapping}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+decoupe\+::partition\+\_\+with\+\_\+overlapping (
+\begin{DoxyParamCaption}
+\item[{integer}]{nb\+\_\+proc, }
+\item[{type({\bf type\+\_\+data})}]{data, }
+\item[{integer, dimension(\+:), pointer}]{points\+\_\+by\+\_\+domain, }
+\item[{integer, dimension(\+:,\+:), pointer}]{assignements, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{domains}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__decoupe_a6f29dcc8367ffa44fa720260882fa04e}
+
+
+Partitions the data using overlapping. 
+
+The method partitions the entire data by defining which point belongs to which domain. It consists of two nested loop. The first one on the points and the second one on the domains (ie the processes). For each point, it checks if it fits the bounds defined in the input {\itshape domains} (and that for each domain) and in that case add to it. \begin{DoxyNote}{Note}
+Some points will be present in different domains. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66}{partition\+\_\+with\+\_\+interface()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the entire data for computing \\
+\hline
+\mbox{\tt in}  & {\em domains} & the domains constructed from the bounds \\
+\hline
+\mbox{\tt in}  & {\em nb\+\_\+proc} & the number of processors used \\
+\hline
+\mbox{\tt out}  & {\em assignements} & the assignement of each point in a partition \\
+\hline
+\mbox{\tt out}  & {\em points\+\_\+by\+\_\+domain} & the number of points in each partition \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__decoupe_a6f29dcc8367ffa44fa720260882fa04e_icgraph}
+\end{center}
+\end{figure}
+
+

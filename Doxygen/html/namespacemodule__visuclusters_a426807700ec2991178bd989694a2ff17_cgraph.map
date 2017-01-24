@@ -1,0 +1,8 @@
+<map id="module_visuclusters::write_partial_clusters" name="module_visuclusters::write_partial_clusters">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__gmsh.html#af04ca060cedb92fb755fd6cbb1330011" title="Writes the clusters before grouping for Gmsh visualization. " alt="" coords="213,85,352,141"/>
+<area shape="rect" id="node5" href="$namespacemodule__visuclusters__paraview.html#abed87b4c957689d9cfdc62811f3b213b" title="Writes the clusters before grouping for Paraview visualization. " alt="" coords="205,165,360,221"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters__gmsh.html#ab3a87863baf4bd33953b9aa7950d5d26" title="Writes point coordinates from coordinates format for Gmsh visualization. " alt="" coords="411,5,582,61"/>
+<area shape="rect" id="node4" href="$namespacemodule__visuclusters__gmsh.html#aa00f636e7ea0ae13557bdf9fa21b285f" title="Writes point coordinates from picture format for Gmsh visualization. " alt="" coords="408,85,585,141"/>
+<area shape="rect" id="node6" href="$namespacemodule__visuclusters__paraview.html#af62b5ff6548f1fd716d4931df4edeaf3" title="Writes point coordinates from coordinates format for Paraview visualization. " alt="" coords="419,165,574,221"/>
+<area shape="rect" id="node7" href="$namespacemodule__visuclusters__paraview.html#a532fbeef76809cf8c4ab2ea3cee9eaee" title="Writes point coordinates from picture format for Paraview visualization. " alt="" coords="419,245,574,301"/>
+</map>

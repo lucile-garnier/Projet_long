@@ -1,0 +1,278 @@
+\hypertarget{namespacemodule__visuclusters__paraview}{}\section{module\+\_\+visuclusters\+\_\+paraview Module Reference}
+\label{namespacemodule__visuclusters__paraview}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+
+
+Contains methods enabling writing results in file specifically formatted for Paraview.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__visuclusters__paraview_a57010b34c7586dcf52fb9f50e2e1d7aa}{write\+\_\+partitioning\+\_\+paraview} (params)
+\begin{DoxyCompactList}\small\item\em Writes the geometry partitioning for Paraview visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__paraview_ad93eb4e679b429c757fcbf8831469a91}{write\+\_\+assignment\+\_\+paraview} (params)
+\begin{DoxyCompactList}\small\item\em Initializes the file of the partitioning for Paraview visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__paraview_abed87b4c957689d9cfdc62811f3b213b}{write\+\_\+partial\+\_\+clusters\+\_\+paraview} (params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters before grouping for Paraview visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__paraview_a7e7514cf4abb2a7e0a8fa1d23252811e}{write\+\_\+final\+\_\+clusters\+\_\+paraview} (params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters after grouping for Paraview visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__paraview_af62b5ff6548f1fd716d4931df4edeaf3}{write\+\_\+points\+\_\+coord\+\_\+format} (unit\+\_\+geo, unit\+\_\+ind, nb\+\_\+points, dim, coords, ids, k)
+\begin{DoxyCompactList}\small\item\em Writes point coordinates from coordinates format for Paraview visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__paraview_a532fbeef76809cf8c4ab2ea3cee9eaee}{write\+\_\+points\+\_\+picture\+\_\+format} (unit\+\_\+geo, unit\+\_\+ind, nb\+\_\+pixels, params, ids, proc\+\_\+ids)
+\begin{DoxyCompactList}\small\item\em Writes point coordinates from picture format for Paraview visualization. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters__paraview_a264164136b0ed4e82c5ef10cfaa2d649}{list\+\_\+commands\+\_\+paraview}
+\begin{DoxyCompactList}\small\item\em Lists the commands related to Paraview visualization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains methods enabling writing results in file specifically formatted for Paraview. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__visuclusters__paraview_a264164136b0ed4e82c5ef10cfaa2d649}{}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}!list\+\_\+commands\+\_\+paraview@{list\+\_\+commands\+\_\+paraview}}
+\index{list\+\_\+commands\+\_\+paraview@{list\+\_\+commands\+\_\+paraview}!module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+\subsubsection[{list\+\_\+commands\+\_\+paraview}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+paraview\+::list\+\_\+commands\+\_\+paraview (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__paraview_a264164136b0ed4e82c5ef10cfaa2d649}
+
+
+Lists the commands related to Paraview visualization. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__paraview_a264164136b0ed4e82c5ef10cfaa2d649_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__paraview_ad93eb4e679b429c757fcbf8831469a91}{}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}!write\+\_\+assignment\+\_\+paraview@{write\+\_\+assignment\+\_\+paraview}}
+\index{write\+\_\+assignment\+\_\+paraview@{write\+\_\+assignment\+\_\+paraview}!module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+\subsubsection[{write\+\_\+assignment\+\_\+paraview}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+paraview\+::write\+\_\+assignment\+\_\+paraview (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__paraview_ad93eb4e679b429c757fcbf8831469a91}
+
+
+Initializes the file of the partitioning for Paraview visualization. 
+
+This method extracts details on partitioning from the {\itshape decoupe.\+x} files and writes them in {\itshape visu/affectation.$\ast$} files. Extra files are written in a case of interface partitioning. {\itshape visu/affectation-\/interface.$\ast$} files are the assignment for the interface. \begin{DoxyNote}{Note}
+{\itshape x} is the identifier (number) of a process. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}{module\+\_\+calcul\+::write\+\_\+partitioning()}, \hyperlink{namespacemodule__decoupe_a523f2f851f39859d9c60114c934b2d66}{partition\+\_\+with\+\_\+interface()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__paraview_ad93eb4e679b429c757fcbf8831469a91_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__paraview_ad93eb4e679b429c757fcbf8831469a91_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__paraview_a7e7514cf4abb2a7e0a8fa1d23252811e}{}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}!write\+\_\+final\+\_\+clusters\+\_\+paraview@{write\+\_\+final\+\_\+clusters\+\_\+paraview}}
+\index{write\+\_\+final\+\_\+clusters\+\_\+paraview@{write\+\_\+final\+\_\+clusters\+\_\+paraview}!module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+\subsubsection[{write\+\_\+final\+\_\+clusters\+\_\+paraview}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+paraview\+::write\+\_\+final\+\_\+clusters\+\_\+paraview (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__paraview_a7e7514cf4abb2a7e0a8fa1d23252811e}
+
+
+Writes the clusters after grouping for Paraview visualization. 
+
+This methods extracts details on computed clusters from {\itshape cluster.\+final.\+x} files and writes them in {\itshape cluster.\+final.\+visu} file. \begin{DoxyNote}{Note}
+{\itshape x} is the identifier (number) of a cluster. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_a819ceed76e9600e8eec63a7b730d1d92}{module\+\_\+calcul\+::write\+\_\+final\+\_\+clusters()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{namespacemodule__visuclusters__paraview_a7e7514cf4abb2a7e0a8fa1d23252811e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{namespacemodule__visuclusters__paraview_a7e7514cf4abb2a7e0a8fa1d23252811e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__paraview_abed87b4c957689d9cfdc62811f3b213b}{}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}!write\+\_\+partial\+\_\+clusters\+\_\+paraview@{write\+\_\+partial\+\_\+clusters\+\_\+paraview}}
+\index{write\+\_\+partial\+\_\+clusters\+\_\+paraview@{write\+\_\+partial\+\_\+clusters\+\_\+paraview}!module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+\subsubsection[{write\+\_\+partial\+\_\+clusters\+\_\+paraview}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+paraview\+::write\+\_\+partial\+\_\+clusters\+\_\+paraview (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__paraview_abed87b4c957689d9cfdc62811f3b213b}
+
+
+Writes the clusters before grouping for Paraview visualization. 
+
+This methods extracts details on computed clusters on each domain from {\itshape cluster.\+partiel.\+x} files and writes them in corresponding {\itshape visu/cluster.\+partiel.\+x.$\ast$} files. \begin{DoxyNote}{Note}
+{\itshape x} is the identifier (number) of a process. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_a24e663b5fc236eee7c6fe434493e342e}{module\+\_\+calcul\+::write\+\_\+partial\+\_\+clusters()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{namespacemodule__visuclusters__paraview_abed87b4c957689d9cfdc62811f3b213b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{namespacemodule__visuclusters__paraview_abed87b4c957689d9cfdc62811f3b213b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__paraview_a57010b34c7586dcf52fb9f50e2e1d7aa}{}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}!write\+\_\+partitioning\+\_\+paraview@{write\+\_\+partitioning\+\_\+paraview}}
+\index{write\+\_\+partitioning\+\_\+paraview@{write\+\_\+partitioning\+\_\+paraview}!module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+\subsubsection[{write\+\_\+partitioning\+\_\+paraview}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+paraview\+::write\+\_\+partitioning\+\_\+paraview (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__paraview_a57010b34c7586dcf52fb9f50e2e1d7aa}
+
+
+Writes the geometry partitioning for Paraview visualization. 
+
+This methods extracts the domain definitions from the {\itshape fort.\+2} file and writes to {\itshape visu/decoupe.$\ast$} files. \begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_abd1cdf529e5c71b3186c8d980e3d5117}{module\+\_\+calcul\+::write\+\_\+partitioning()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__paraview_a57010b34c7586dcf52fb9f50e2e1d7aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__paraview_af62b5ff6548f1fd716d4931df4edeaf3}{}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}!write\+\_\+points\+\_\+coord\+\_\+format@{write\+\_\+points\+\_\+coord\+\_\+format}}
+\index{write\+\_\+points\+\_\+coord\+\_\+format@{write\+\_\+points\+\_\+coord\+\_\+format}!module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+\subsubsection[{write\+\_\+points\+\_\+coord\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+paraview\+::write\+\_\+points\+\_\+coord\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{integer}]{unit\+\_\+geo, }
+\item[{integer}]{unit\+\_\+ind, }
+\item[{integer}]{nb\+\_\+points, }
+\item[{integer}]{dim, }
+\item[{double precision, dimension(\+:,\+:), pointer}]{coords, }
+\item[{integer, dimension(\+:), pointer}]{ids, }
+\item[{integer}]{k}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__paraview_af62b5ff6548f1fd716d4931df4edeaf3}
+
+
+Writes point coordinates from coordinates format for Paraview visualization. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__paraview_af62b5ff6548f1fd716d4931df4edeaf3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters__paraview_a532fbeef76809cf8c4ab2ea3cee9eaee}{}\index{module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}!write\+\_\+points\+\_\+picture\+\_\+format@{write\+\_\+points\+\_\+picture\+\_\+format}}
+\index{write\+\_\+points\+\_\+picture\+\_\+format@{write\+\_\+points\+\_\+picture\+\_\+format}!module\+\_\+visuclusters\+\_\+paraview@{module\+\_\+visuclusters\+\_\+paraview}}
+\subsubsection[{write\+\_\+points\+\_\+picture\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+\_\+paraview\+::write\+\_\+points\+\_\+picture\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{integer}]{unit\+\_\+geo, }
+\item[{integer}]{unit\+\_\+ind, }
+\item[{integer}]{nb\+\_\+pixels, }
+\item[{type({\bf type\+\_\+params})}]{params, }
+\item[{integer, dimension(\+:), pointer}]{ids, }
+\item[{integer, dimension(\+:), pointer}]{proc\+\_\+ids}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters__paraview_a532fbeef76809cf8c4ab2ea3cee9eaee}
+
+
+Writes point coordinates from picture format for Paraview visualization. 
+
+The following is written in the geometric file for each point \+: 
+\begin{DoxyItemize}
+\item {\bfseries  For 2\+D case}\+: {\itshape  x y } 
+\item {\bfseries  For 3\+D case}\+: {\itshape  x y z} 
+\end{DoxyItemize}And the following is written in the process partitioning file for each point \+: {\itshape  ind } \begin{DoxyNote}{Note}
+x,y and z are the coordinates and ind is the identifier of the process. 
+
+This method writes headers at first in the files. 
+\end{DoxyNote}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters__paraview_a532fbeef76809cf8c4ab2ea3cee9eaee_icgraph}
+\end{center}
+\end{figure}
+
+

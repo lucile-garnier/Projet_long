@@ -1,0 +1,220 @@
+\hypertarget{namespacemodule__visuclusters}{}\section{module\+\_\+visuclusters Module Reference}
+\label{namespacemodule__visuclusters}\index{module\+\_\+visuclusters@{module\+\_\+visuclusters}}
+
+
+Contains methods enabling writing results in a selected data file format (for now \+: Paraview or G\+M\+S\+H)  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__visuclusters_ab68939a34024c66e1e7cc64a0dcf8736}{read\+\_\+metadata} (params)
+\begin{DoxyCompactList}\small\item\em Reads a file containing metadata on the data and the computed clusters. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_adae3f4360febb54cb901ce9f591d8656}{write\+\_\+partitioning} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Writes the geometry of the partitioning (Gmsh or Paraview) and calls the eponym function. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_a11320cacc6eae8f372b75e9ec61b38b6}{write\+\_\+assignment} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Initializes the file of the partitionning. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_a426807700ec2991178bd989694a2ff17}{write\+\_\+partial\+\_\+clusters} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters before grouping by calling the corresponding method (Gmsh or Paraview) \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_adf901cfd1bc769cadd3558369594b074}{write\+\_\+final\+\_\+clusters} (format\+\_\+output, params)
+\begin{DoxyCompactList}\small\item\em Writes the clusters after grouping by calling the corresponding method (Gmsh or Paraview) \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__visuclusters_aeed2c5753cf8c47dadf20e55474c830b}{list\+\_\+commands} (format\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Lists the commands related to Gmsh or Paraview depending on the input parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains methods enabling writing results in a selected data file format (for now \+: Paraview or G\+M\+S\+H) 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__visuclusters_aeed2c5753cf8c47dadf20e55474c830b}{}\index{module\+\_\+visuclusters@{module\+\_\+visuclusters}!list\+\_\+commands@{list\+\_\+commands}}
+\index{list\+\_\+commands@{list\+\_\+commands}!module\+\_\+visuclusters@{module\+\_\+visuclusters}}
+\subsubsection[{list\+\_\+commands}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+::list\+\_\+commands (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{format\+\_\+output}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters_aeed2c5753cf8c47dadf20e55474c830b}
+
+
+Lists the commands related to Gmsh or Paraview depending on the input parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em format\+\_\+output} & the file format for visualization \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters_aeed2c5753cf8c47dadf20e55474c830b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters_ab68939a34024c66e1e7cc64a0dcf8736}{}\index{module\+\_\+visuclusters@{module\+\_\+visuclusters}!read\+\_\+metadata@{read\+\_\+metadata}}
+\index{read\+\_\+metadata@{read\+\_\+metadata}!module\+\_\+visuclusters@{module\+\_\+visuclusters}}
+\subsubsection[{read\+\_\+metadata}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+::read\+\_\+metadata (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters_ab68939a34024c66e1e7cc64a0dcf8736}
+
+
+Reads a file containing metadata on the data and the computed clusters. 
+
+This function extracts the following information from the input {\itshape fort.\+3} file \+: 
+\begin{DoxyEnumerate}
+\item The data file name  
+\item The number of the points in the entire data set  
+\item The number of processes used  
+\item The partitioning mode (by interface or overlapping)  
+\item The number of clusters found  
+\item The data file format  
+\end{DoxyEnumerate}In the case of a picture format\+: this extra information is written \+: 
+\begin{DoxyEnumerate}
+\item The image dimension  
+\item The image partitioning  
+\item The number of attributes  
+\item The number of steps (only in geometric format)  
+\end{DoxyEnumerate}\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__sortie_a3093c50035046621188d9a0da3b8a587}{write\+\_\+metadata()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacemodule__visuclusters_a11320cacc6eae8f372b75e9ec61b38b6}{}\index{module\+\_\+visuclusters@{module\+\_\+visuclusters}!write\+\_\+assignment@{write\+\_\+assignment}}
+\index{write\+\_\+assignment@{write\+\_\+assignment}!module\+\_\+visuclusters@{module\+\_\+visuclusters}}
+\subsubsection[{write\+\_\+assignment}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+::write\+\_\+assignment (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{format\+\_\+output, }
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters_a11320cacc6eae8f372b75e9ec61b38b6}
+
+
+Initializes the file of the partitionning. 
+
+This method extracts details on partitioning from the {\itshape decoupe.\+x} files. \begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__visuclusters_a426807700ec2991178bd989694a2ff17}{module\+\_\+calcul\+::write\+\_\+partial\+\_\+clusters()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\mbox{\tt in}  & {\em format\+\_\+output} & the file format for visualization \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters_a11320cacc6eae8f372b75e9ec61b38b6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters_adf901cfd1bc769cadd3558369594b074}{}\index{module\+\_\+visuclusters@{module\+\_\+visuclusters}!write\+\_\+final\+\_\+clusters@{write\+\_\+final\+\_\+clusters}}
+\index{write\+\_\+final\+\_\+clusters@{write\+\_\+final\+\_\+clusters}!module\+\_\+visuclusters@{module\+\_\+visuclusters}}
+\subsubsection[{write\+\_\+final\+\_\+clusters}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+::write\+\_\+final\+\_\+clusters (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{format\+\_\+output, }
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters_adf901cfd1bc769cadd3558369594b074}
+
+
+Writes the clusters after grouping by calling the corresponding method (Gmsh or Paraview) 
+
+This methods extracts details on computed clusters from {\itshape cluster.\+final.\+x} files. \begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__visuclusters_adf901cfd1bc769cadd3558369594b074}{module\+\_\+calcul\+::write\+\_\+final\+\_\+clusters()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\mbox{\tt in}  & {\em format\+\_\+output} & the file format for visualization \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters_adf901cfd1bc769cadd3558369594b074_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters_a426807700ec2991178bd989694a2ff17}{}\index{module\+\_\+visuclusters@{module\+\_\+visuclusters}!write\+\_\+partial\+\_\+clusters@{write\+\_\+partial\+\_\+clusters}}
+\index{write\+\_\+partial\+\_\+clusters@{write\+\_\+partial\+\_\+clusters}!module\+\_\+visuclusters@{module\+\_\+visuclusters}}
+\subsubsection[{write\+\_\+partial\+\_\+clusters}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+::write\+\_\+partial\+\_\+clusters (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{format\+\_\+output, }
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters_a426807700ec2991178bd989694a2ff17}
+
+
+Writes the clusters before grouping by calling the corresponding method (Gmsh or Paraview) 
+
+This methods extracts details on computed clusters on each domain from {\itshape cluster.\+partiel.\+x} files. \begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__visuclusters_a426807700ec2991178bd989694a2ff17}{module\+\_\+calcul\+::write\+\_\+partial\+\_\+clusters()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\mbox{\tt in}  & {\em format\+\_\+output} & the file format for visualization \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters_a426807700ec2991178bd989694a2ff17_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__visuclusters_adae3f4360febb54cb901ce9f591d8656}{}\index{module\+\_\+visuclusters@{module\+\_\+visuclusters}!write\+\_\+partitioning@{write\+\_\+partitioning}}
+\index{write\+\_\+partitioning@{write\+\_\+partitioning}!module\+\_\+visuclusters@{module\+\_\+visuclusters}}
+\subsubsection[{write\+\_\+partitioning}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+visuclusters\+::write\+\_\+partitioning (
+\begin{DoxyParamCaption}
+\item[{character (len=30)}]{format\+\_\+output, }
+\item[{type({\bf type\+\_\+params})}]{params}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__visuclusters_adae3f4360febb54cb901ce9f591d8656}
+
+
+Writes the geometry of the partitioning (Gmsh or Paraview) and calls the eponym function. 
+
+This methods extracts the domain definitions from the {\itshape fort.\+2} file. \begin{DoxySeeAlso}{See also}
+\hyperlink{namespacemodule__visuclusters_adae3f4360febb54cb901ce9f591d8656}{module\+\_\+calcul\+::write\+\_\+partitioning()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em params} & the parameters defined in the \textit{param.in} file \\
+\hline
+\mbox{\tt in}  & {\em format\+\_\+output} & the file format for visualization \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__visuclusters_adae3f4360febb54cb901ce9f591d8656_cgraph}
+\end{center}
+\end{figure}
+
+

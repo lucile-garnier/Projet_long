@@ -1,0 +1,204 @@
+\hypertarget{namespacemodule__calcul}{}\section{module\+\_\+calcul Module Reference}
+\label{namespacemodule__calcul}\index{module\+\_\+calcul@{module\+\_\+calcul}}
+
+
+Contains the spectral clustering method and methods that computes affinity parameters for kernels and overlapping.  
+
+
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacemodule__calcul_abd05b2b3ee81b4f779744a951d8a4c05}{get\+\_\+sigma} (partitioned\+\_\+data, sigma)
+\begin{DoxyCompactList}\small\item\em Computes the affinity parameter $sigma$. \end{DoxyCompactList}\item 
+subroutine \hyperlink{namespacemodule__calcul_a118fd6a58b1064989fa68460457bea60}{get\+\_\+sigma\+\_\+interface} (proc\+\_\+id, partitioned\+\_\+data, sigma, bounds, partitioning, epsilon)
+\begin{DoxyCompactList}\small\item\em Computes the affinity parameter $sigma$ for the interface. \end{DoxyCompactList}\item 
+double precision function, dimension(partitioned\+\_\+data\%nb, partitioned\+\_\+data\%nb) \hyperlink{namespacemodule__calcul_a97fd8d0653adb9041ab3ca899c0d0f91}{poly\+\_\+kernel} (partitioned\+\_\+data, gam, delta)
+\item 
+double precision function, dimension(partitioned\+\_\+data\%nb, partitioned\+\_\+data\%nb) \hyperlink{namespacemodule__calcul_a44b26b54d1b94dddba0ba575be04658b}{gaussian\+\_\+kernel} (partitioned\+\_\+data, sigma)
+\item 
+subroutine \hyperlink{namespacemodule__calcul_a72848eb89fbd2fe4a97512f53752ca5c}{apply\+\_\+kernel\+\_\+k\+\_\+means} (proc\+\_\+id, nb\+\_\+clusters\+\_\+max, nb\+\_\+clusters\+\_\+opt, partitioned\+\_\+data, clust\+\_\+param)
+\item 
+subroutine \hyperlink{namespacemodule__calcul_a7bf1a318c636b4e204f267103d00114a}{apply\+\_\+spectral\+\_\+clustering} (proc\+\_\+id, nb\+\_\+clusters\+\_\+max, nb\+\_\+clusters\+\_\+opt, partitioned\+\_\+data, sigma, clust\+\_\+param)
+\item 
+subroutine \hyperlink{namespacemodule__calcul_abb4a64b9f338e54274a250b9c10bf0bd}{mean\+\_\+shift} (proc\+\_\+id, nb\+\_\+clusters\+\_\+max, nb\+\_\+clusters\+\_\+opt, partitioned\+\_\+data, bandwidth)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the spectral clustering method and methods that computes affinity parameters for kernels and overlapping. 
+
+\subsection{Function/\+Subroutine Documentation}
+\hypertarget{namespacemodule__calcul_a72848eb89fbd2fe4a97512f53752ca5c}{}\index{module\+\_\+calcul@{module\+\_\+calcul}!apply\+\_\+kernel\+\_\+k\+\_\+means@{apply\+\_\+kernel\+\_\+k\+\_\+means}}
+\index{apply\+\_\+kernel\+\_\+k\+\_\+means@{apply\+\_\+kernel\+\_\+k\+\_\+means}!module\+\_\+calcul@{module\+\_\+calcul}}
+\subsubsection[{apply\+\_\+kernel\+\_\+k\+\_\+means}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+calcul\+::apply\+\_\+kernel\+\_\+k\+\_\+means (
+\begin{DoxyParamCaption}
+\item[{integer}]{proc\+\_\+id, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+max, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+opt, }
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{type({\bf type\+\_\+clustering\+\_\+param})}]{clust\+\_\+param}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__calcul_a72848eb89fbd2fe4a97512f53752ca5c}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{namespacemodule__calcul_a72848eb89fbd2fe4a97512f53752ca5c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__calcul_a7bf1a318c636b4e204f267103d00114a}{}\index{module\+\_\+calcul@{module\+\_\+calcul}!apply\+\_\+spectral\+\_\+clustering@{apply\+\_\+spectral\+\_\+clustering}}
+\index{apply\+\_\+spectral\+\_\+clustering@{apply\+\_\+spectral\+\_\+clustering}!module\+\_\+calcul@{module\+\_\+calcul}}
+\subsubsection[{apply\+\_\+spectral\+\_\+clustering}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+calcul\+::apply\+\_\+spectral\+\_\+clustering (
+\begin{DoxyParamCaption}
+\item[{integer}]{proc\+\_\+id, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+max, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+opt, }
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{double precision}]{sigma, }
+\item[{type({\bf type\+\_\+clustering\+\_\+param})}]{clust\+\_\+param}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__calcul_a7bf1a318c636b4e204f267103d00114a}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemodule__calcul_a7bf1a318c636b4e204f267103d00114a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__calcul_a44b26b54d1b94dddba0ba575be04658b}{}\index{module\+\_\+calcul@{module\+\_\+calcul}!gaussian\+\_\+kernel@{gaussian\+\_\+kernel}}
+\index{gaussian\+\_\+kernel@{gaussian\+\_\+kernel}!module\+\_\+calcul@{module\+\_\+calcul}}
+\subsubsection[{gaussian\+\_\+kernel}]{\setlength{\rightskip}{0pt plus 5cm}double precision function, dimension(partitioned\+\_\+data\%nb,partitioned\+\_\+data\%nb) module\+\_\+calcul\+::gaussian\+\_\+kernel (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{double precision}]{sigma}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__calcul_a44b26b54d1b94dddba0ba575be04658b}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{namespacemodule__calcul_a44b26b54d1b94dddba0ba575be04658b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__calcul_abd05b2b3ee81b4f779744a951d8a4c05}{}\index{module\+\_\+calcul@{module\+\_\+calcul}!get\+\_\+sigma@{get\+\_\+sigma}}
+\index{get\+\_\+sigma@{get\+\_\+sigma}!module\+\_\+calcul@{module\+\_\+calcul}}
+\subsubsection[{get\+\_\+sigma}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+calcul\+::get\+\_\+sigma (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{double precision}]{sigma}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__calcul_abd05b2b3ee81b4f779744a951d8a4c05}
+
+
+Computes the affinity parameter $sigma$. 
+
+The Gaussian affinity matrix is widely used and depends on a free parameter $\sigma$. It is known that this parameter affects the results in spectral clustering and spectral embedding. With an assumption that the $p$ dimensionnal data set S composed of $n$ points is isotropic enough, this data set is included in a $p$ dimensional box bounded by $D_{max}$ the largest distance between pairs of points in $S$ \+: \begin{equation}D_{max} = \max_{1\leq i,j\leq n} \Vert x_i - x_j \Vert \end{equation} So a reference distance noted $\sigma$ could be defined. This distance represents the case of an uniform distribution in the sense that all pair of points are seprated by the same distance $\sigma$ in the box of edge size $D_{max}$ \+: \begin{equation}\sigma = \frac{D_{max}}{n^{1/p}} \end{equation} ~\newline
+ This function is used to compute this parameter on one domain. The algorithm is simple \+: 
+\begin{DoxyEnumerate}
+\item {\bfseries  Find the maximum distance using two nested loops over the points in the domain }  
+\item {\bfseries  Divide it by the $p^{th}$ root of $n$ }  
+\end{DoxyEnumerate}
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em partitioned\+\_\+data} & the partitioned data for computing \\
+\hline
+\mbox{\tt out}  & {\em sigma} & the affinity parameter \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{namespacemodule__calcul_abd05b2b3ee81b4f779744a951d8a4c05_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__calcul_a118fd6a58b1064989fa68460457bea60}{}\index{module\+\_\+calcul@{module\+\_\+calcul}!get\+\_\+sigma\+\_\+interface@{get\+\_\+sigma\+\_\+interface}}
+\index{get\+\_\+sigma\+\_\+interface@{get\+\_\+sigma\+\_\+interface}!module\+\_\+calcul@{module\+\_\+calcul}}
+\subsubsection[{get\+\_\+sigma\+\_\+interface}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+calcul\+::get\+\_\+sigma\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{integer}]{proc\+\_\+id, }
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{double precision}]{sigma, }
+\item[{double precision, dimension(\+:,\+:,\+:), pointer}]{bounds, }
+\item[{integer, dimension(\+:), pointer}]{partitioning, }
+\item[{double precision}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__calcul_a118fd6a58b1064989fa68460457bea60}
+
+
+Computes the affinity parameter $sigma$ for the interface. 
+
+This method is useful when the partitioning is made by interface. Because, the domain defining the interface has a volume whose topology changes drastically, a specific computation of $\sigma$ has to be made. \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]Use \hyperlink{namespacemodule__calcul_abd05b2b3ee81b4f779744a951d8a4c05}{get\+\_\+sigma()} instead 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em partitioned\+\_\+data} & the partitioned data for computing \\
+\hline
+\mbox{\tt in}  & {\em bounds} & the intervals along each dimension representing the bounds of each partition \\
+\hline
+\mbox{\tt in}  & {\em epsilon} & the slice thickness \\
+\hline
+\mbox{\tt in}  & {\em proc\+\_\+id} & the processus identifier \\
+\hline
+\mbox{\tt in}  & {\em partitioning} & the partitionning (number of processors along each dimension) \\
+\hline
+\mbox{\tt out}  & {\em sigma} & the affinity parameter \\
+\hline
+\end{DoxyParams}
+\end{DoxyRefDesc}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{namespacemodule__calcul_a118fd6a58b1064989fa68460457bea60_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacemodule__calcul_abb4a64b9f338e54274a250b9c10bf0bd}{}\index{module\+\_\+calcul@{module\+\_\+calcul}!mean\+\_\+shift@{mean\+\_\+shift}}
+\index{mean\+\_\+shift@{mean\+\_\+shift}!module\+\_\+calcul@{module\+\_\+calcul}}
+\subsubsection[{mean\+\_\+shift}]{\setlength{\rightskip}{0pt plus 5cm}subroutine module\+\_\+calcul\+::mean\+\_\+shift (
+\begin{DoxyParamCaption}
+\item[{integer}]{proc\+\_\+id, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+max, }
+\item[{integer}]{nb\+\_\+clusters\+\_\+opt, }
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{integer}]{bandwidth}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__calcul_abb4a64b9f338e54274a250b9c10bf0bd}
+\hypertarget{namespacemodule__calcul_a97fd8d0653adb9041ab3ca899c0d0f91}{}\index{module\+\_\+calcul@{module\+\_\+calcul}!poly\+\_\+kernel@{poly\+\_\+kernel}}
+\index{poly\+\_\+kernel@{poly\+\_\+kernel}!module\+\_\+calcul@{module\+\_\+calcul}}
+\subsubsection[{poly\+\_\+kernel}]{\setlength{\rightskip}{0pt plus 5cm}double precision function, dimension(partitioned\+\_\+data\%nb,partitioned\+\_\+data\%nb) module\+\_\+calcul\+::poly\+\_\+kernel (
+\begin{DoxyParamCaption}
+\item[{type({\bf type\+\_\+data})}]{partitioned\+\_\+data, }
+\item[{double precision}]{gam, }
+\item[{double precision}]{delta}
+\end{DoxyParamCaption}
+)}\label{namespacemodule__calcul_a97fd8d0653adb9041ab3ca899c0d0f91}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{namespacemodule__calcul_a97fd8d0653adb9041ab3ca899c0d0f91_icgraph}
+\end{center}
+\end{figure}
+
+

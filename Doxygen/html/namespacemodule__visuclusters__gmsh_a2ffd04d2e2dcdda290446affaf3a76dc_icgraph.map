@@ -1,0 +1,3 @@
+<map id="module_visuclusters_gmsh::write_partitioning_gmsh" name="module_visuclusters_gmsh::write_partitioning_gmsh">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters.html#adae3f4360febb54cb901ce9f591d8656" title="Writes the geometry of the partitioning (Gmsh or Paraview) and calls the eponym function. " alt="" coords="259,5,397,47"/>
+</map>

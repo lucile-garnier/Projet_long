@@ -1,0 +1,8 @@
+<map id="module_entree::read_params" name="module_entree::read_params">
+<area shape="rect" id="node2" href="$namespacemodule__entree.html#aaa0e9ef36218a32292aa65a9b8602cda" title="Reads data written in picture format. " alt="" coords="200,5,340,47"/>
+<area shape="rect" id="node3" href="$namespacemodule__entree.html#ae5047aaa626b5cac3c9f98267f502669" title="Reads data written in geometric format. " alt="" coords="200,71,340,112"/>
+<area shape="rect" id="node4" href="$namespacemodule__entree.html#a25df009403bc610c2ef3b3a151574979" title="Reads data written in threshold format. " alt="" coords="200,136,340,177"/>
+<area shape="rect" id="node5" href="$namespacemodule__entree.html#a93d220ea64cd5e1d155255bca188de0c" title="Reads data written in coordinates format. " alt="" coords="200,201,340,243"/>
+<area shape="rect" id="node6" href="$namespacemodule__entree.html#ae91fc1d896afb27c01d7314dce81db70" title="Displays help on used formats and keywords for param.in file. " alt="" coords="201,267,339,294"/>
+<area shape="rect" id="node7" href="$namespacemodule__entree.html#a08bc5eb1225bf568c94df30b22f04e03" title="Puts the index number of the pixels into an array. " alt="" coords="193,319,347,360"/>
+</map>

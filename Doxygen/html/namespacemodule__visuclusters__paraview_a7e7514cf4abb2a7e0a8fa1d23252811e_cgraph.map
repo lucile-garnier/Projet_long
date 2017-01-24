@@ -1,0 +1,4 @@
+<map id="module_visuclusters_paraview::write_final_clusters_paraview" name="module_visuclusters_paraview::write_final_clusters_paraview">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__paraview.html#af62b5ff6548f1fd716d4931df4edeaf3" title="Writes point coordinates from coordinates format for Paraview visualization. " alt="" coords="196,5,351,61"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters__paraview.html#a532fbeef76809cf8c4ab2ea3cee9eaee" title="Writes point coordinates from picture format for Paraview visualization. " alt="" coords="196,85,351,141"/>
+</map>

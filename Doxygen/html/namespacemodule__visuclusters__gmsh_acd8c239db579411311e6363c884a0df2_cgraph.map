@@ -1,0 +1,4 @@
+<map id="module_visuclusters_gmsh::affectation_gmsh" name="module_visuclusters_gmsh::affectation_gmsh">
+<area shape="rect" id="node2" href="$namespacemodule__visuclusters__gmsh.html#a41ad6ca7c4bee856ce765e3c56991a67" title="Writes points in Gmsh format. " alt="" coords="220,5,381,47"/>
+<area shape="rect" id="node3" href="$namespacemodule__visuclusters__gmsh.html#a1e757e4155e8c02b95c594bb26a69f8a" title="Writes points from picture format to Gmsh format. " alt="" coords="229,71,372,127"/>
+</map>

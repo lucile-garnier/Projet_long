@@ -1,0 +1,309 @@
+visu.txt : 
+
+visuClustersStructure
+=> crée une structure de fichier pour l'ensemble des paramèter géo : dimension, point recouvrements etc
+
+
+
+visuDecoup
+=> visualisation du decoupage parallele en 2D' 
+
+
+
+visuClusters
+=>'visualisation des clusters en 2D/3D'
+ !lecture des infos
+!choix du format de sortie
+!creation de la sub-directory visu/ pour stocker les fichiers paraview
+!geometrie du decoupage
+!fichier de sortie
+!fichier de sortie des clusters avant et après regroupement
+!liste des commandes
+=> Affiche le temps user et systeme
+
+=========================================================================
+subroutine_avec_MPI.txt : 
+
+program cluster
+
+lit avec un MPI_ABORT qu'il y a moyen d'éviter en remontant une info à
+l'appelant
+
+=========================================================================
+carte.txt :
+
+clusters.f90
+
+!initialisations MPI classiques
+
+! lecture des datas (processeur 0)
+  if(numproc==0) then
+    call lit(data,epsilon,coordmin,coordmax,nbproc,decoupe,mesh,sigma,nblimit,listenbideal)
+      module_entree
+      données
+      données/résultats
+      résultats
+  end if
+
+! decoupage (processeur 0)
+  if(numproc==0) the
+    call decoupedata(data,epsilon,nbproc,coordmin,coordmax,decoupe,ldat,ddat,bornes)
+      module_decoupe
+      données
+      données/résultats
+      résultats
+    q? envoi données vers autres proc 
+  end if
+
+?? idée ??
+initialiser MPI après avoir lu et découpé les données
+peut-être aussi ne pas initialiser MPI quand un seul processeur est demandé
+     
+! cas nbproc > 1
+================
+  if (nbproc>1) then
+
+     ! calcul du sigma
+     call MPI_BCAST(sigma,1,MPI_DOUBLE_PRECISION,0,MPI_COMM_WORLD,ierr) ===> utile ?
+     if ((sigma==0.0).and.(numproc==0)) then
+        call calculsigmainterface(numproc,data,sigma,bornes,decoupe,epsilon)
+          module_calcul
+          données
+          données/résultats
+          résultats
+     end if
+
+     ! envoi du sigma
+     if (sigma>=0.0) then
+          call MPI_BCAST(sigma,1,MPI_DOUBLE_PRECISION,0,MPI_COMM_WORLD,ierr)
+     end if
+
+     ! envoi du nblimit
+     call MPI_BARRIER(MPI_COMM_WORLD,ierr)  ====> inutile
+     call MPI_BCAST(nblimit,1,MPI_INTEGER,0,MPI_COMM_WORLD,ierr)
+
+     ! envoi du nbideal (stocké dans un vecteur) processeur 0 vers les autres
+     ....
+     call MPI_BARRIER(MPI_COMM_WORLD,ierr)  ====> inutile
+
+     !transferts des datas
+     if (numproc==0) then
+        !envoi des datas
+        call  envoidecoupes(nbproc,data,ldat,ddat,dataw)
+          module_MPI
+          données
+          données/résultats
+          résultats
+     else
+        !reception des datas
+        call recoitdecoupes(numproc,dataw)
+          module_MPI
+          données
+          données/résultats
+          résultats
+     endif
+
+! cas 1 proc
+============
+  else
+    ! allocation et maj de la structure dataw
+    ! est-ce que ce n'est pas fait aussi dans envoidecoupes et/ou
+    ! recoitdecoupes
+     nbideal=listenbideal(1)  => 1 et 0 dans le cas du proc 0 quand nbproc > 1, contradiction ?
+  endif
+
+! calcul du sigma si mode auto individuel : explications ?
+  if (sigma<0.0) then
+     ! calcul du sigma par 0 et bcast
+     if (numproc==0) call calculsigma(data,sigma)
+                            module_calcul
+                            données
+                            données/résultats
+                            résultats
+     call MPI_BCAST(sigma,1,MPI_DOUBLE_PRECISION,0,MPI_COMM_WORLD,ierr)
+
+     ! calcul du sigma sur l'interface par 0 si cas interface
+     if (numproc==0) then
+        if (data%interface==1) then 
+           call calculsigmainterface(numproc,dataw,sigma,bornes,decoupe,epsilon) 
+             module_calcul
+             données
+             données/résultats
+             résultats
+        end if
+     end if
+  end if
+
+! calcul des clusters
+  ! partie //
+  ! si on a des données
+  if (dataw%nb>0) then
+     TODO paramètre de contrôle qui indique le cas plein/creux
+     ! cas plein
+     call calculclusters(numproc,nblimit,nbideal,dataw,sigma)
+         module_calcul
+         données
+         données/résultats
+         résultats
+     ! cas creux
+     call sp_calculclusters(numproc,nblimit,nbideal,dataw,sigma)
+         module_sparse
+         données
+         données/résultats
+         résultats
+  endif
+
+
+! sauvegarde des clusters regroupes
+  call ecritcluster(numproc,dataw)
+    module_sortie
+    données
+    données/résultats
+    résultats
+
+! récupération des clusters autres proc vers 0
+
+! cas nbproc > 1
+================
+  if (nbproc>1) then
+     !regroupement des clusters   autres proc vers 0
+     if (numproc==0) then
+        ! création de la liste des clusters avec doublon
+        call preparecpclusters(nbproc,nbclust,ldat,dataw,nclust)
+          module_MPI
+          données
+          données/résultats
+          résultats
+
+        !réception des infos de clusters
+        allocate(clustermap(nbclust,data%nb))
+        call recepclusters(nbproc,nbclust,ldat,ddat,dataw,clustermap,nclust,iclust)
+          module_MPI
+          données
+          données/résultats
+          résultats
+     else
+        ! creation de la liste des clusters avec doublon
+        call prepaenvclusters(numproc,dataw)
+          module_MPI
+          données
+          données/résultats
+          résultats
+        ! envoi des infos de clusters
+        call envoiclusters(numproc,dataw)
+          module_MPI
+          données
+          données/résultats
+          résultats
+     endif
+
+     ! fin du postprocess processeur 0
+     if (numproc==0) then
+        !regroupement des clusters et ecriture du resultat
+        call regroupe(nbclust,iclust,clustermap,data)
+          module_regroupe
+          données
+          données/résultats
+          résultats
+     endif
+
+! cas 1 proc (même question que pour la distribution des données :
+============  est-ce que quelquechose de ressemblant est fait dans regroupe ?)
+  else
+     nbclust=dataw%nbclusters
+     allocate(iclust(nbclust)); iclust(:)=0; nmax=0
+     do i=1,dataw%nb
+        j=dataw%point(i)%cluster
+        iclust(j)=iclust(j)+1
+        nmax=max(nmax,iclust(j))
+     enddo
+     allocate(clustermap(nbclust,nmax)); clustermap(:,:)=0
+     iclust(:)=0
+     do i=1,dataw%nb
+        j=dataw%point(i)%cluster
+        iclust(j)=iclust(j)+1
+        clustermap(j,iclust(j))=i
+     enddo
+  endif
+
+! écriture résultats dans fichiers (processeur 0)
+  if (numproc==0) then
+
+     !ecriture des cluster.final.
+     call ecritclusterfinal(nbclust,iclust,clustermap)
+       module_sortie
+       données
+       données/résultats
+       résultats
+
+     !ecriture des informations
+     call ecrit_info(mesh,data,nbproc,nbclust)
+       module_sortie
+       données
+       données/résultats
+       résultats
+  endif
+
+=============================================
+module_entree
+
+! affichage de l'aide à l'appel du programme
+  subroutine help
+  données : none
+  données/résultats : none
+  résultats : none
+
+! lecture du fichier d'entree
+subroutine lit(data,epsilon,coordmin,coordmax,nbproc,decoupe,mesh,sigma,nblimit,listenbideal)
+  données
+  données/résultats
+  résultats
+
+  call lit_mesh_image(mesh,data,coordmin,coordmax)
+  call lit_mesh_geom(mesh,data,coordmin,coordmax)
+  call lit_mesh_seuil(mesh,data,coordmin,coordmax)
+  call lit_mesh_coord(mesh,data,coordmin,coordmax)
+
+  ! explications ?
+  if ((data%image==1).or.(data%geom==1).or.(data%seuil==1)) then
+  !creation du tableau de correspondances pixel/coord
+    print *,'  > decodage du format image...'
+    call tableau_image(data)
+  end if
+
+
+! lecture des datas en format coord
+subroutine lit_mesh_coord(mesh,data,coordmin,coordmax)
+  données
+  données/résultats
+  résultats
+
+! lecture d'image
+subroutine lit_mesh_image(mesh,data,coordmin,coordmax)
+  données
+  données/résultats
+  résultats
+
+! lecture image en mode geom
+subroutine lit_mesh_geom(mesh,data,coordmin,coordmax)
+  données
+  données/résultats
+  résultats
+
+! lecture des datas en format seuil
+subroutine lit_mesh_seuil(mesh,data,coordmin,coordmax)
+  données
+  données/résultats
+  résultats
+
+!mise en tableau des indices de points pour les formats image
+subroutine tableau_image(data)
+  données
+  données/résultats
+  résultats
+
+
+=============================================
+améliorations :
+
+0.0 -> double precision zero

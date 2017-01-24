@@ -1,0 +1,26 @@
+
+BINDIR=../bin
+
+#****************************************
+#mpich
+	MPIPATH=/opt/mpich-1.2.7p1
+	MPIF90=/opt/mpich-1.2.7p1/bin/mpif90
+	LIBPATH= -L$(MPIPATH)/lib/ -lmpich
+	INCLUDE=-I$(MPIPATH)/include/
+#****************************************
+
+#****************************************
+#Lapack
+        LIBLAPACK = -L/opt/intel/Compiler/11.1/072/mkl/lib/32 -lmkl_intel -lmkl_sequential -lmkl_lapack -lmkl_core
+#****************************************
+
+#****************************************
+#Compilateur Fortran 90
+	F90=ifort
+
+#Parametres de compilation
+	#OPTIONS=-fpp -Daff=.false. -check all -traceback
+	OPTIONS=-fpp -Daff=.false.
+	FLAGS=-O3
+#****************************************
+

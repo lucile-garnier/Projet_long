@@ -1,0 +1,6 @@
+<map id="module_sparse::sp_calculclusters" name="module_sparse::sp_calculclusters">
+<area shape="rect" id="node2" href="$namespacemodule__sparse.html#aecc1ae4d02263991968e2fd1c4f3863e" title="module_sparse::solve\l_arpack" alt="" coords="291,5,438,47"/>
+<area shape="rect" id="node4" href="$namespacemodule__sparse.html#a97a851c9469442afca2123b8253ece80" title="Computes the ideal number of clusters using sparsity. " alt="" coords="272,71,457,112"/>
+<area shape="rect" id="node3" href="$namespacemodule__sparse.html#af4804b47ba74f9fbdcbaca26519da881" title="Computes the matrix vector product using sparsity. " alt="" coords="505,13,685,39"/>
+<area shape="rect" id="node5" href="$namespacemodule__embed.html#ae2293e491f986a1b9204f06947a83458" title="Implements K&#45;Means algorithm (required by spectral clustering and Kernel K&#45;Means methods) ..." alt="" coords="521,71,670,112"/>
+</map>

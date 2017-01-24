@@ -1,0 +1,32 @@
+
+BINDIR=../bin
+
+#****************************************
+#mpich
+MPIF90=ifort
+LIBPATH= -lmpi
+INCLUDE=
+#****************************************
+
+#****************************************
+#Lapack
+LIBLAPACK = -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lmkl_lapack -lguide
+#****************************************
+
+#****************************************
+#Arpack
+INCARP = -I${HOME}/opt/ARPACK/include
+LIBARP = -L${HOME}/opt/ARPACK/lib -larpack_LINUX
+#****************************************
+
+
+#****************************************
+#Compilateur Fortran 90
+	F90=ifort
+
+#Parametres de compilation
+	#OPTIONS=-fpp -Daff=.false. -check all -traceback
+	OPTIONS=-fpp -Daff=.false.
+	FLAGS=-O3
+#****************************************
+

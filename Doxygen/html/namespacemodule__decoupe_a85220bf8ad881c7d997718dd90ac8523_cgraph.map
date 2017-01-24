@@ -1,0 +1,8 @@
+<map id="module_decoupe::partition_data" name="module_decoupe::partition_data">
+<area shape="rect" id="node2" href="$namespacemodule__decoupe.html#aecaeb4c9e1ca0663dba6e26a23894c82" title="Defines the bounds of each subdomain. " alt="" coords="266,5,429,47"/>
+<area shape="rect" id="node3" href="$namespacemodule__decoupe.html#a02c8c1f0d5ab808b5a3332d1acab53d1" title="Defines the different subdomains. " alt="" coords="266,71,429,112"/>
+<area shape="rect" id="node4" href="$namespacemodule__sortie.html#a0a8af1ac206256ec83eb53e4e70a9952" title="Writes the fort.2 file containing the domain definitions. " alt="" coords="278,136,417,177"/>
+<area shape="rect" id="node5" href="$namespacemodule__decoupe.html#a60b5b03ad944548e82eb0034c2d4eda5" title="Partitions the data by interfacing. " alt="" coords="260,201,435,243"/>
+<area shape="rect" id="node6" href="$namespacemodule__decoupe.html#a94157bc437ba9da7a6791537486a2f79" title="Partitions the data by overlapping. " alt="" coords="260,267,435,308"/>
+<area shape="rect" id="node7" href="$namespacemodule__sortie.html#ab2222c67ab2d2568cabd19efe0fb7a36" title="Writes the decoupe.x files containing the partitionning. " alt="" coords="278,332,417,373"/>
+</map>
